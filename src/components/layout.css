@@ -87,9 +87,8 @@
     --bg-2: #1a1a1b;
     --accent-1: hotpink;
     --accent-2: #02f0f0;
-    --grey: #888888;
-    --text-color: white;
-    --grey: lightgrey;
+    --grey: #fafafabe;
+    --text-color: var(--grey);
     --shadow-color: rgba(0, 0, 0, 0.9);
     --href-color: var(--accent-1);
     --href-hover-color: var(--accent-2);
