@@ -7,8 +7,6 @@ import moment from "moment"
 export default function PhotoTemplate({ data, pageContext, location }) {
   const image = data.sanityMyImage
 
-  console.log(image)
-
   const formatedDateTime = moment(
     image.myImage.asset._rawMetadata.exif.DateTimeOriginal
   ).format("MMMM Do, YYYY")
@@ -17,15 +15,17 @@ export default function PhotoTemplate({ data, pageContext, location }) {
     <Layout location={location}>
       <article className="page container center">
         <figure className="figure">
-          <Img fluid={image.myImage.asset.fluid} />
+          <Img
+            fluid={image.myImage.asset.fluid}
+            style={{ boxShadow: `var(--elevation-3)` }}
+          />
           <figcaption className="figcaption  only-mobile-padding">
             <time
-              className="text--sm"
               style={{ color: `var(--grey)`, marginRight: `var(--space-sm)` }}
             >
-              {formatedDateTime}.
+              <small> {formatedDateTime}.</small>
             </time>
-            <small className="text--sm">{image.caption}</small>
+            <small style={{ color: `var(--grey)` }}>{image.caption}</small>
           </figcaption>
         </figure>
       </article>

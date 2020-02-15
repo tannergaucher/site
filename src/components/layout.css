@@ -4,12 +4,11 @@
 :root {
   /* Colors */
   --text-color: black;
-  --bg-1: #fafafa;
+  --bg-1: white;
   --bg-2: white;
   --grey: #666666;
-  --brand: cyan;
   --accent-1: black;
-  --accent-2: hotpink;
+  --accent-2: fuchsia;
   --code-bg: #28272c;
   /* Components */
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -21,9 +20,9 @@
   --opacity: opacity(0.35);
   --transition: all 0.2s ease 0s;
   /* Layout */
-  --container: 833px;
+  --container: 850px;
   --max-width: 2000px;
-  /* Scale */
+  /*  */
   --responsive-unit: 0.5vw;
   --baseline: calc(1.2rem + var(--responsive-unit));
   /* Typography */
@@ -32,11 +31,11 @@
   --mono: "Fira Code", monospace;
   --heading-line-height: 1.3;
   --paragraph-line-height: 1.7;
-  --heading-letter-spacing: 0.02rem;
-  --paragraph-letter-spacing: 0.02rem;
+  --heading-letter-spacing: 0rem;
+  --paragraph-letter-spacing: 0rem;
   --caps-letter-spacing: 0.17rem;
-  --text-base-size: calc(1rem + var(--responsive-unit));
-  --text-scale-ratio: 1.22;
+  --text-base-size: calc(1.2rem + var(--responsive-unit));
+  --text-scale-ratio: 1.23;
 
   /* VARIABLES BELOW THIS HAVE DERIVED / CALCULATED VALUES: ADJUSTING THEM CAN BREAK THE SYSTEM. TREAD LIGHTLY  */
 
@@ -68,7 +67,7 @@
   --space-sm: calc(var(--baseline) / 2);
   --space-md: var(--baseline);
   --space-lg: calc(var(--baseline) * 2);
-  --space-xl: calc(var(--baseline) * 3);
+  --space-xl: calc(var(--baseline) * 4);
   /* Derived Component Colors */
   --href-color: var(--accent-1);
   --href-hover-color: var(--accent-2);
@@ -77,8 +76,8 @@
   --btn-border: var(--href-color);
   --btn-hover-color: var(--text-color);
   --primary-btn-bg: var(--text-color);
-  --primary-btn-color: var(--brand);
-  --primary-btn-hover-color: var(--brand);
+  --primary-btn-color: var(--accent-2);
+  --primary-btn-hover-color: var(--accent-1);
   --input-border: var(--text-color);
 }
 
@@ -86,7 +85,7 @@
   :root {
     --bg-1: black;
     --bg-2: #1a1a1b;
-    --accent-1: #d81e9f;
+    --accent-1: hotpink;
     --accent-2: #02f0f0;
     --grey: #888888;
     --text-color: white;
@@ -254,7 +253,6 @@ pre[class*="language-"] {
   margin-top: var(--space-md);
   margin-bottom: var(--space-md);
   border-radius: var(--radius);
-  /* box-shadow: var(--elevation-2); */
 }
 
 hr {
@@ -406,13 +404,15 @@ hr {
 }
 
 .navlink {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
   margin-right: var(--space-sm);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   margin-left: 0;
   font-weight: 700;
   font-size: var(--text-md);
 }
+
+/* TODO: REMOVE */
 
 .nav-link {
   text-decoration: none;
@@ -547,7 +547,6 @@ a,
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: var(--space-sm);
-  max-width: var(--max-width);
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
 }
@@ -572,14 +571,14 @@ a,
 /* Typography */
 
 .site-title {
-  text-transform: uppercase;
-  letter-spacing: var(--caps-letter-spacing);
   margin: 0;
   padding: var(--space-md) 0;
   padding-right: var(--space-md);
-  font-weight: 500;
 }
 
 .title {
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: var(--caps-letter-spacing);
+  font-style: italic;
 }

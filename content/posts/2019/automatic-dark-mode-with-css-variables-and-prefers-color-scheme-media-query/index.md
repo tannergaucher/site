@@ -1,14 +1,11 @@
 ---
 title: "Responsive UI Themes with @prefers-color-scheme Media Query and CSS Variables"
 date: "2019-11-13"
-description: "How to detect if a user's operating system is in light / dark mode and present a themed UI, without any JavaScript."
+description: "How to detect if a user's operating system is in light / dark mode and present a themed UI, using only CSS."
 tags: ["CSS", "Web"]
 ---
 
-<!-- LOOPED VIDEO / GIF HERE  -->
-<!-- INTRO PARAGRAPH TEXT HERE -->
-
-## Minimal Implementation of a Responsive Color Scheme
+## Minimal Responsive Color Scheme
 
 ```css
 :root {
@@ -35,6 +32,6 @@ a {
 }
 ```
 
-First declare some root CSS variables. To keep things simple, just a text color, a background color, and a link color. Then add the media query `prefers-color-scheme`, which will detect if the user's system is in dark mode. If we detect dark mode, we can switch any arbitrary CSS value inside the media query. In this case, setting the text color to white and the background color to black.
-
 [MDN prefers-color-scheme documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+
+[MDN CSS variables documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)

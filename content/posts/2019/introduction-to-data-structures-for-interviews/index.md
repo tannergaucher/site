@@ -41,7 +41,7 @@ tags: ["Notes", "CS"]
 
 - Fast operations
 
-### Implementation of a Stack
+### Implementation of a stack
 
 ```js
 class Stack {
@@ -73,7 +73,7 @@ class Stack {
 }
 ```
 
-### Implementation of a Queue
+### Implementation of a queue
 
 ```js
 class Queue {
@@ -116,7 +116,7 @@ class Queue {
 - Each item has a property next that points to another object
 - Linked lists are often the underlying data structure for a stack or a queue
 
-> ### What Is a Reference?
+> ### What is a reference?
 >
 > When we assign values to an object, we are really just pointing to that object. The object doesn't live inside the variable, the variable is just a pointer to the object in memory. If we assign another variable to that object, we have 2 variables pointing to the same object. But there's only one object. That's what we mean by reference. Pointers point to nodes (objects).
 
@@ -131,7 +131,7 @@ class Queue {
 
 - Costly lookups (when searching. If you have a reference to a node that you want to delete, then it's constant)
 
-### Naive Linked List Example
+### Naive linked list
 
 ```js
 const linkedList = {
@@ -151,11 +151,11 @@ const linkedList = {
 - This example has no reference to previous. If it did, it would be a _doubly linked list_
 - Hash tables often use linked lists under the hood
 
-> ### Common Use Case for a Linked List
+> ### Common use case for a linked list
 >
 > A Least recently used cache, which keeps track of new searches. As we get new input, we take things out. A least recently used cache would remove the least recently searched term.
 
-### Linked List Implementation
+### Linked list implementation
 
 ```js
 class LinkedList {
@@ -235,13 +235,13 @@ class LinkedList {
 - Unordered
 - Single directional lookups
 
-### Hash Table Main Concepts
+### Hash table main concepts
 
 - Hashing function
 - Collisions
 - Resizing
 
-### Hashing Function
+### Hashing function
 
 - Takes key and hashes it
 - For every input, always gives the same output
@@ -260,7 +260,7 @@ class LinkedList {
 - When you get the same hash value for multiple keys. So one hash value has multiple contents
 - Having many collisions can affect run time for a lookup
 
-### Hash Table Implementation
+### Hash table implementation
 
 ```js
 class HashTable {
@@ -338,6 +338,6 @@ class HashTable {
 - Slow inserts
 - Slow deletes (because when inserting / deleting from the middle, must shift everything over)
 
-> ### Strings and Space Complexity
+> ### Strings and space complexity
 >
-> Strings are not mutable. If you change a string, you're really copying to a new string with that change. This has space complexity implications. If you're trying to do something in constant space, you can't use a strings. When working with strings, it's often better to split into array and manipulate using array methods.
+> Strings are not mutable. If you change a string, you're really copying to a new string with that change. This has space complexity implications. If you're trying to do something in constant space, you can't use strings. When working with strings, it's often better to split into array and manipulate using array methods.

@@ -11,14 +11,14 @@ tags: ["Notes", "CS"]
 - Why care? It's an engineers job to solve problems
 - Identify pattern -> apply correct algorithm -> solve problem in optimal way
 
-### Time Complexity
+### Time complexity
 
 - How we estimate the speed of an algorithm
 - How many operations are expected to solve the problem, in respect to input size
 - Pessimistic, assume worst case conditions
 - "As the input grows, it will grow in this proportion"
 
-### Common Run Times From Fast to Very Slow
+### Common run times from fast to very slow
 
 - Constant 0(1)
 - Logarithmic 0(logN)
@@ -27,11 +27,11 @@ tags: ["Notes", "CS"]
 - Exponential 0(k^n)
 - Logarithmic
 
-> #### Logarithmic Versus Exponential
+> #### Logarithmic versus exponential
 >
 > In logarithmic time, as input increases, number of operations decreases by a fraction. Time complexity increases by a fraction, thus it grows slowly. This means logarithmic is often better than linear with large datasets.
 
-### Space Complexity
+### Space complexity
 
 - How much memory is used
 - Works in similar way to time, but on the question of how much more space are we taking up
@@ -43,7 +43,7 @@ tags: ["Notes", "CS"]
 - Caching trades time complexity for space complexity
 - Important when the callback function is expensive, and usually the right tradeoff in a browser environment
 
-### Implementing a Cache to Keep Track of Already Seen Values in Linear Time
+### Implementing a cache to keep track of already seen values in linear time
 
 ```js
 const uniqSort = arr => {
@@ -69,11 +69,11 @@ uniqSort([4, 2, 2, 2, 3, 2, 2, 2, 2]) // => [2,3,4]
 - Factorials are a common type of problem to solve using memoization, because you do a lot of the same calculations over and over
 - Rather than recalculating the result, memoize it
 
-> #### Memoization and Caching
+> #### Memoization and caching
 >
 > Memoization is just a type of caching. If you are caching the result of a function, then it's called memoization.
 
-### Using Memoization to Save the Results of a Calculation
+### Using memoization to save the results of a calculation
 
 ```js
 const times10 = n => {
@@ -95,7 +95,7 @@ const memoTimes10 = n => {
 }
 ```
 
-### Using Memoization and Closure to Solve the Same Problem
+### Using memoization and closure to solve the same problem
 
 ```js
 const memoizedClosureTimes10 = () => {
@@ -130,7 +130,7 @@ memoClosureTimes10(9) // cached result
 - This lets us remember prior values
 - Important concept: returning a function from a function that can be called later
 
-### Writing a Generic Memoize Function
+### Writing a generic memoize function
 
 ```js
 // Possible callbacks
@@ -180,7 +180,7 @@ memoizeTimes20(8) // cached
 - Wrapper function
 - Accumulator function
 
-#### Divide and Conquer
+#### Divide and conquer
 
 - A recursive technique where we:
   - Take large problem
@@ -188,12 +188,12 @@ memoizeTimes20(8) // cached
 
 ## Search Algorithms
 
-### Linear Search
+### Linear search
 
 - Search for a value in an array by checking each value in order
 - Linear time
 
-#### Implementing Linear Search
+#### Implementing linear search
 
 ```js
 function linearSearch(list, item) {
@@ -213,12 +213,12 @@ linearSearch([1, 2, 3, 4, 5, 6], 5) // returns 4
 
 - Simply loop through a list, and look for the searched value
 
-### Binary Search
+### Binary search
 
 - Search for a value in a sorted array by cutting the side of the search area in half
 - Logarithmic time
 
-#### Implementing Binary Search
+#### Implementing binary search
 
 ```js
 function binarySearch(list, item) {
@@ -249,13 +249,13 @@ binarySearch([2, 6, 7, 90, 103], 90) // returns 3
 - It's logarithmic because the work that we have to do (dataset) is cut in half each time
 - List being searched _must be sorted_ for binary search
 
-#### Binary Search Steps
+#### Binary search steps
 
 1. Break sorted array in half
 2. Is value the value that we're looking for `<` or `>` current location?
 3. Repeat
 
-> #### Using Binary Search
+> #### Using binary search
 >
 > If you have an interview question involving a sorted array, binary search is usually the way to go. If it's not sorted, there are other searching algorithms.
 
@@ -266,7 +266,7 @@ binarySearch([2, 6, 7, 90, 103], 90) // returns 3
   - Naive sorts
   - Divide and conquer sorts
 
-### Naive Sorts
+### Naive sorts
 
 - Keep looping and comparing values until list is sorted
 - Two loops involved == quadratic time
@@ -275,7 +275,7 @@ binarySearch([2, 6, 7, 90, 103], 90) // returns 3
   - Insertion sort
   - Selection sort
 
-### Divide and Conquer Sorts
+### Divide and conquer sorts
 
 - Recursively divide list / smaller parts of list until entire list is sorted
 - Recursive division == logarithmic time
@@ -283,7 +283,7 @@ binarySearch([2, 6, 7, 90, 103], 90) // returns 3
   - Merge sort
   - Quicksort
 
-### Implementing Non-optimized Bubble Sort
+### Implementing non-optimized bubble sort
 
 ```js
 const arrayRandom = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8]
@@ -322,7 +322,7 @@ bubbleSortBasic(arrayRandom) // =>
 - Compare adjacent indices
 - Swap the greater value to the end
 
-### Implementing Optimized Bubble Sort
+### Implementing optimized bubble sort
 
 ```js
 const arrayRandom = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8]
@@ -363,11 +363,11 @@ bubbleSort(arrayRandom) // =>
 - If there's an iteration where we don't have to make any swaps, that's a sign that array is already sorted
 - Can short circuit extra looping and return that array
 
-> #### On Using Bubble Sort
+> #### On using bubble sort
 >
 > If you're dealing with a mostly sorted list, and you've optimized the algorithm to track arrays that are already sorted to begin with, bubble sort becomes an OK choice despite being quadratic time. When dealing with a reversed list, it is terrible.
 
-### Implementing Merge Sort
+### Implementing merge sort
 
 ```js
 function mergeSort(arr) {
@@ -418,7 +418,7 @@ mergeSort(list) // => [1, 2, 2, 3, 3, 5, 6, 7, 8]
   - Shift the array with the lower value
   - Repeat until both arrays are empty
 
-> #### On Using Merge Sort
+> #### On using merge sort
 >
 > Merge sort is one of the best sorts. If you need to sort something in an interview, merge sort is probably what they are looking for. However a good strategy is to start with the simplest answer, reference the more complicated answer, but not necessarily jump into influencing merge sort. Acknowledge that you've heard of it, but don't necessarily jump to implement it. "Is it alright to start with bubble sort? It is quadratic time, while merge sort is logarithmic..."
 
@@ -429,17 +429,17 @@ mergeSort(list) // => [1, 2, 2, 3, 3, 5, 6, 7, 8]
 - Given a decision, do the one that looks like the best decision at that time, without considering the big picture
 - Always making the locally optimal choice does **_not_** always give the optimal solution.
 
-> ### Using Greedy Algorithms
+> ### Using greedy algorithms
 >
 > Can be a choice when the dataset is so large that you can't think of all scenarios. It's computationally too much and it's better to have **_a_** solution than none at all.
 
-### Problems with Using a Greedy Approach
+### Problems with using a greedy approach
 
 - Can seem like it's correct
 - But it's hard to prove that it's correct
 - Have to then ask, "Is locally optimal solution actually the globally optimal solution
 
-### Implementing a Brute Force Algorithm
+### Implementing a brute force algorithm
 
 - In an interview setting could go with a brute force solution that is correct, and then optimize later
 

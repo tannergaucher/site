@@ -13,7 +13,7 @@ export default function PostTemplate({ data, pageContext, location }) {
       <SEO title="Posts" />
       <article className="padding page container center">
         <h1 className="title">{post.frontmatter.title}</h1>
-        <h2 className="text--md" style={{ fontWeight: `400` }}>
+        <h2 className="text--md" style={{ fontWeight: `500` }}>
           {post.frontmatter.description}
         </h2>
         <time>
@@ -27,25 +27,27 @@ export default function PostTemplate({ data, pageContext, location }) {
           className="post-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div style={{ margin: `var(--space-xl) 0` }}>
+        <hr />
+        <br />
+        <section>
           {next && (
             <>
               <small>Next</small>
               <Link to={next.fields.slug} className="nav-link">
-                <h3 className="title">{next.frontmatter.title}</h3>
+                <h2 className="title">{next.frontmatter.title}</h2>
               </Link>
             </>
           )}
-
           {previous && (
             <>
               <small>Previous</small>
               <Link to={previous.fields.slug} className="nav-link">
-                <h3 className="title">{previous.frontmatter.title}</h3>
+                <h2 className="title">{previous.frontmatter.title}</h2>
               </Link>
             </>
           )}
-        </div>
+        </section>
+        <br />
       </article>
     </Layout>
   )

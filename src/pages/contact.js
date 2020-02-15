@@ -1,9 +1,11 @@
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
+
 import React from "react"
 
 export default function ContactPage({ location }) {
   return (
     <Layout location={location}>
+      <SEO title="Contact" />
       <div className="page container center padding">
         <br />
         <fieldset className="fieldset">
