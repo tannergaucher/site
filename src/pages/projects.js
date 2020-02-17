@@ -10,28 +10,26 @@ const ProjectsPage = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="Projects" />
-      <article className="page container center padding">
+      <article className="page padding content-grid">
         {edges.map(edge => (
-          <div key={edge.node.id} style={{ marginBottom: `var(--space-xl)` }}>
-            <h2 className="title">
-              <a
-                className="nav-link"
-                href={edge.node.frontmatter.deployedUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {edge.node.frontmatter.title}
-              </a>
-            </h2>
-            <p>{edge.node.frontmatter.description}</p>
-            <nav className="nav">
+          <div className="card" key={edge.node.id}>
+            <a
+              className="nav-link"
+              href={edge.node.frontmatter.deployedUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className="card-title">{edge.node.frontmatter.title}</h2>
+            </a>
+            <p className="card-text">{edge.node.frontmatter.description}</p>
+            <nav className="nav card-text">
               <a
                 className="nav-link"
                 href={edge.node.frontmatter.githubRepo}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h4>View Source</h4>
+                Source
               </a>
               <a
                 className="nav-link"
@@ -39,7 +37,7 @@ const ProjectsPage = ({ location }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h4>View Demo</h4>
+                Demo
               </a>
             </nav>
           </div>

@@ -1,11 +1,11 @@
 ---
 title: "Responsive UI Themes with @prefers-color-scheme Media Query and CSS Variables"
 date: "2019-11-13"
-description: "How to detect if a user's operating system is in light / dark mode and present a themed UI, using only CSS."
+description: "How to detect if a user's operating system is in light / dark mode and present a themed UI, using just CSS."
 tags: ["CSS", "Web"]
 ---
 
-## Minimal Responsive Color Scheme
+## Responsive Theme Example
 
 ```css
 :root {

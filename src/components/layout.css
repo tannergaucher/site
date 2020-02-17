@@ -2,16 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap");
 
 :root {
-  /* Colors */
+  /* COLORS */
   --text-color: black;
-  --bg-1: white;
+  --bg-1: #fafafaee;
   --bg-2: white;
   --grey: #666666;
   --accent-1: black;
   --accent-2: fuchsia;
   --code-bg: #28272c;
-  /* Components */
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  /* COMPONENTS */
+  --shadow-color: rgba(163, 119, 119, 0.1);
   --radius: 5px;
   --thickness: 0.2vw;
   --elevation-1: 0 4px 12px var(--shadow-color);
@@ -19,13 +19,13 @@
   --elevation-3: 0 12px 20px var(--shadow-color);
   --opacity: opacity(0.35);
   --transition: all 0.2s ease 0s;
-  /* Layout */
+  /* LAYOUT  */
   --container: 850px;
   --max-width: 2000px;
-  /*  */
+  /* VALUES */
   --responsive-unit: 0.5vw;
   --baseline: calc(1.2rem + var(--responsive-unit));
-  /* Typography */
+  /* TYPOGRAPHY */
   --sans: "Inter", sans-serif;
   --serif: "";
   --mono: "Fira Code", monospace;
@@ -34,8 +34,8 @@
   --heading-letter-spacing: 0rem;
   --paragraph-letter-spacing: 0rem;
   --caps-letter-spacing: 0.17rem;
-  --text-base-size: calc(1.2rem + var(--responsive-unit));
-  --text-scale-ratio: 1.23;
+  --text-base-size: calc(1rem + var(--responsive-unit));
+  --text-scale-ratio: 1.17;
 
   /* VARIABLES BELOW THIS HAVE DERIVED / CALCULATED VALUES: ADJUSTING THEM CAN BREAK THE SYSTEM. TREAD LIGHTLY  */
 
@@ -69,6 +69,7 @@
   --space-lg: calc(var(--baseline) * 2);
   --space-xl: calc(var(--baseline) * 4);
   /* Derived Component Colors */
+
   --href-color: var(--accent-1);
   --href-hover-color: var(--accent-2);
   --btn-bg: var(--bg-1);
@@ -83,15 +84,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-1: black;
+    /* Customizable values */
+    --bg-1: rgb(22, 21, 24);
     --bg-2: #1a1a1b;
     --accent-1: hotpink;
-    --accent-2: #02f0f0;
-    --grey: #fafafabe;
+    --accent-2: #80cba2;
+    --grey: #fafafa;
     --text-color: var(--grey);
-    --shadow-color: rgba(0, 0, 0, 0.9);
+    --shadow-color: rgba(25, 17, 37, 0.883);
     --href-color: var(--accent-1);
     --href-hover-color: var(--accent-2);
+    /*  */
     --btn-color: var(--href-color);
     --btn-hover-color: var(--href-hover-color);
     --primary-btn-bg: var(--bg-2);
@@ -137,6 +140,7 @@ h1 {
 h1 .site-title {
   font-size: var(--text-xxxl);
 }
+
 h1,
 .text--xxl {
   font-size: var(--text-xxl);
@@ -177,6 +181,7 @@ p {
   line-height: var(--paragraph-line-height);
   letter-spacing: var(--paragraph-letter-spacing);
   font-weight: 500;
+  font-size: var(--text-md);
 }
 
 small {
@@ -187,6 +192,7 @@ li {
   margin-bottom: var(--space-sm);
   line-height: var(--paragraph-line-height);
   font-weight: 500;
+  font-size: var(--text-md);
 }
 
 li:last-child {
@@ -213,6 +219,7 @@ textarea {
 pre {
   font-family: var(--mono);
   background: var(--code-bg);
+  box-shadow: var(--elevation-1);
 }
 
 blockquote {
@@ -311,7 +318,7 @@ hr {
   background: var(--primary-btn-bg);
   color: var(--primary-btn-color);
   border: var(--thickness) solid var(--primary-btn-bg);
-  box-shadow: var(--elevation-3);
+  box-shadow: var(--elevation-2);
 }
 
 .btn-primary:hover,
@@ -328,7 +335,7 @@ hr {
 
 .card {
   background: var(--bg-2);
-  box-shadow: var(--elevation-2);
+  box-shadow: var(--elevation-1);
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
@@ -342,11 +349,13 @@ hr {
 .card-title {
   margin: 0;
   padding: var(--space-sm);
+  font-weight: 900;
 }
 
 .card-text {
   margin: 0;
   padding: var(--space-sm);
+  color: var(--grey);
 }
 
 .fieldset {
@@ -418,6 +427,7 @@ hr {
   margin-right: var(--space-md);
   color: var(--href-color);
   transition: var(--transition);
+  font-weight: 700;
 }
 
 .nav-link:last-child {
@@ -551,8 +561,8 @@ a,
 }
 
 .page {
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-xl);
+  margin-top: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 @media (max-width: 830px) {
@@ -577,7 +587,4 @@ a,
 
 .title {
   font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: var(--caps-letter-spacing);
-  font-style: italic;
 }

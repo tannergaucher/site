@@ -11,11 +11,9 @@ export default function PostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO title="Posts" />
-      <article className="padding page container center">
+      <article className="padding page container">
         <h1 className="title">{post.frontmatter.title}</h1>
-        <h2 className="text--md" style={{ fontWeight: `500` }}>
-          {post.frontmatter.description}
-        </h2>
+        <p style={{ color: `var(--grey)` }}>{post.frontmatter.description}</p>
         <time>
           <h3 className="text--md" style={{ marginTop: `var(--space-lg)` }}>
             {post.frontmatter.date}
