@@ -4,9 +4,8 @@ import { Link } from "gatsby"
 import React from "react"
 
 export default function PostTemplate({ data, pageContext, location }) {
-  const post = data.markdownRemark
-
   const { next, previous } = pageContext
+  const post = data.markdownRemark
 
   return (
     <Layout location={location}>
@@ -30,7 +29,7 @@ export default function PostTemplate({ data, pageContext, location }) {
         <section>
           {next && (
             <>
-              <small>Next</small>
+              <small style={{ color: `var(--accent-2)` }}>Next</small>
               <Link to={next.fields.slug} className="nav-link">
                 <h2 className="title">{next.frontmatter.title}</h2>
               </Link>
@@ -38,7 +37,7 @@ export default function PostTemplate({ data, pageContext, location }) {
           )}
           {previous && (
             <>
-              <small>Previous</small>
+              <small style={{ color: `var(--accent-2)` }}>Previous</small>
               <Link to={previous.fields.slug} className="nav-link">
                 <h2 className="title">{previous.frontmatter.title}</h2>
               </Link>

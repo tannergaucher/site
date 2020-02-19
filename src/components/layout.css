@@ -85,13 +85,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Customizable values */
-    --bg-1: rgb(22, 21, 24);
+    --bg-1: black;
     --bg-2: #1a1a1b;
-    --accent-1: hotpink;
-    --accent-2: #80cba2;
-    --grey: #fafafa;
-    --text-color: var(--grey);
-    --shadow-color: rgba(25, 17, 37, 0.883);
+    --accent-1: deeppink;
+    --accent-2: turquoise;
+    --grey: grey;
+    --text-color: #fafafa;
+    --shadow-color: rgba(255, 20, 145, 0.239);
     --href-color: var(--accent-1);
     --href-hover-color: var(--accent-2);
     /*  */
@@ -118,6 +118,10 @@ body {
 
 a {
   color: var(--href-color);
+}
+
+a:hover {
+  color: var(--href-hover-color);
 }
 
 h1,
@@ -444,11 +448,11 @@ a,
   color: var(--href-hover-color);
 }
 
-a,
+/* a,
 .nav-link[data-is-active="true"] {
   color: var(--href-hover-color);
   text-decoration: underline;
-}
+} */
 
 .textarea {
   font-family: var(--sans);
@@ -587,4 +591,14 @@ a,
 
 .title {
   font-weight: 900;
+}
+
+/* Local */
+
+.post-body a {
+  color: var(--href-color);
+}
+
+.post-body a:hover {
+  color: var(--href-hover-color);
 }

@@ -5,13 +5,6 @@ description: "My notes from the Frontend Masters course."
 tags: ["Notes", "CS"]
 ---
 
-- [Stacks and Queues](#stacks-and-queues)
-- [Linked Lists](#linked-lists)
-- [Hash Tables](#hash-tables)
-- [Arrays and Strings](#arrays-and-strings)
-- [Trees and Heaps](#trees-and-heaps)
-- [Graphs](#graphs)
-
 ## On Application Versus Implementation
 
 - Be able to implement them, but more importantly, be able to apply the correct ones to solve problems / interview questions
