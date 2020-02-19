@@ -17,7 +17,9 @@ const IndexPage = ({ location }) => {
           {edges.map(edge => (
             <div key={edge.node.id} className="card">
               <Link className="nav-link" to={edge.node.fields.slug}>
-                <h2 className="card-title">{edge.node.frontmatter.title}</h2>
+                <h2 className="card-title title">
+                  {edge.node.frontmatter.title}
+                </h2>
               </Link>
               <p className="card-text">{edge.node.frontmatter.description}</p>
               <div className="card-text">
