@@ -19,7 +19,9 @@ const ProjectsPage = ({ location }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 className="card-title">{edge.node.frontmatter.title}</h2>
+              <h2 className="card-heading title">
+                {edge.node.frontmatter.title}
+              </h2>
             </a>
             <p className="card-text">{edge.node.frontmatter.description}</p>
             <nav className="nav card-text">

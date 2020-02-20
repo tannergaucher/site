@@ -15,13 +15,7 @@ export default function PhotoPage({ location }) {
         {/* Wrapping Img in a parent element, IE <Link/> causes it to not fill grid. */}
         {edges.map(edge => (
           // <Link to={`/photo/${edge.node.slug.current}`}>
-          <Img
-            key={edge.node.id}
-            fluid={edge.node.myImage.asset.fluid}
-            style={{
-              boxShadow: `var(--elevation-3)`,
-            }}
-          />
+          <Img key={edge.node.id} fluid={edge.node.myImage.asset.fluid} />
           // </Link>
         ))}
       </div>
