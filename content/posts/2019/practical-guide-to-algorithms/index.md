@@ -1,7 +1,7 @@
 ---
 title: "Practical Guide to Algorithms"
 date: "2019-10-07"
-description: "My notes from the Frontend Masters course."
+description: "My notes from the Frontend Masters course"
 tags: ["Notes", "CS"]
 ---
 

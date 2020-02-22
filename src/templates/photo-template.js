@@ -7,7 +7,7 @@ import moment from "moment"
 export default function PhotoTemplate({ data, pageContext, location }) {
   const image = data.sanityMyImage
 
-  const formatedDateTime = moment(
+  const formattedDateTime = moment(
     image.myImage.asset._rawMetadata.exif.DateTimeOriginal
   ).format("MMMM Do, YYYY")
 
@@ -23,11 +23,11 @@ export default function PhotoTemplate({ data, pageContext, location }) {
             <time
               style={{ color: `var(--grey)`, marginRight: `var(--space-sm)` }}
             >
-              <small> {formatedDateTime}.</small>
+              <small> {formattedDateTime}.</small>
             </time>
-            <small style={{ color: `var(--grey)` }}>{image.caption}</small>
           </figcaption>
         </figure>
+        <br />
       </article>
     </Layout>
   )

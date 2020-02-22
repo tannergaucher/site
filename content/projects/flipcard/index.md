@@ -1,7 +1,16 @@
 ---
 title: "Flipcard.fun"
-description: "Share jokes on a card that flips. React context. Netlify functions. JWT authentication. React Spring animation. MongoDB Atlas cloud database."
+description: "Share jokes with friends on a card that flips"
+uses:
+  [
+    "React Context",
+    "Web share API",
+    "React Spring animation",
+    "Netlify lambda functions",
+    "JWT authentication",
+    "MongoDB Atlas",
+  ]
 deployedUrl: "https://flipcard.fun"
-vimeoUrl: "https://player.vimeo.com/video/383812956"
+vimeoUrl: ""
 githubRepo: "https://github.com/tannergaucher/flip-card"
 ---

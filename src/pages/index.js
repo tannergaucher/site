@@ -1,12 +1,11 @@
 import { Layout, SEO } from "../components"
-import { useLatestPosts, useSiteMetadata } from "../hooks"
 
 import { Link } from "gatsby"
 import React from "react"
 import { kebabCase } from "lodash"
+import { useLatestPosts } from "../hooks"
 
 const IndexPage = ({ location }) => {
-  const { description } = useSiteMetadata()
   const { edges } = useLatestPosts()
 
   return (

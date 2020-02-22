@@ -1,6 +1,5 @@
-import { Image, Layout, SEO } from "../components"
+import { Layout, SEO } from "../components"
 
-import { Link } from "gatsby"
 import React from "react"
 import { useAllProjects } from "../hooks"
 
@@ -23,7 +22,16 @@ const ProjectsPage = ({ location }) => {
                 {edge.node.frontmatter.title}
               </h2>
             </a>
-            <p className="card-text">{edge.node.frontmatter.description}</p>
+            <h3 className="card-text">{edge.node.frontmatter.description}</h3>
+            <div className="card-text">
+              <ul>
+                {edge.node.frontmatter.uses.map(tech => (
+                  <li key={tech}>
+                    <small>{tech}</small>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <nav className="nav card-text">
               <a
                 className="nav-link"
@@ -33,14 +41,16 @@ const ProjectsPage = ({ location }) => {
               >
                 Source
               </a>
-              <a
-                className="nav-link"
-                href={edge.node.frontmatter.vimeoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </a>
+              {edge.node.frontmatter.vimeoUrl && (
+                <a
+                  className="nav-link"
+                  href={edge.node.frontmatter.vimeoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </a>
+              )}
             </nav>
           </div>
         ))}
