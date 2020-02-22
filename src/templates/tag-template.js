@@ -15,7 +15,7 @@ export default function TagTemplate({ pageContext, location, data }) {
                 <div key={edge.node.id} className="card">
                   <Link className="nav-link" to={`/${edge.node.fields.slug}`}>
                     <h2 className="card-title">
-                      {edge.Xnode.frontmatter.title}
+                      {edge.node.frontmatter.title}
                     </h2>
                     <p className="card-text">
                       {edge.node.frontmatter.description}
