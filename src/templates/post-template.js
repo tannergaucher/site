@@ -10,7 +10,7 @@ export default function PostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO title="Posts" />
-      <article className="padding page container">
+      <article className="padding page center container">
         <time>
           <small>{post.frontmatter.date}</small>
         </time>

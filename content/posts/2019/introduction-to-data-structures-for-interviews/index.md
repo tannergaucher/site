@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Data Structures for Interviews"
 date: "2019-12-10"
-description: "My notes from the Frontend Masters course."
+description: "My notes from the Frontend Masters course"
 tags: ["Notes", "CS"]
 ---
 

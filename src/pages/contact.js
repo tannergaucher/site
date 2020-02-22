@@ -7,6 +7,7 @@ export default function ContactPage({ location }) {
     <Layout location={location}>
       <SEO title="Contact" />
       <div className="page container center padding">
+        <br />
         <fieldset className="fieldset">
           <form
             className="form"
