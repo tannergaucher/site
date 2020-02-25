@@ -3,9 +3,10 @@ title: "Flipcard.fun"
 description: "Share jokes with friends on a card that flips"
 uses:
   [
-    "React Context",
-    "Web share API",
+    "React Context API",
+    "React Hooks",
     "React Spring animation",
+    "Web share API",
     "Netlify lambda functions",
     "JWT authentication",
     "MongoDB Atlas",
