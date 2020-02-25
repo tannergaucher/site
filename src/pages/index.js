@@ -9,9 +9,8 @@ import {
 } from "../components"
 
 import React from "react"
-import { useLatestPosts } from "../hooks"
 
-  const { edges } = useLatestPosts()
+const Hr = () => <hr style={{ margin: `var(--space-xl) var(--space-sm)` }} />
 
 export default function IndexPage({ location }) {
   return (
