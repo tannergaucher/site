@@ -7,12 +7,14 @@ export default function TagTemplate({ pageContext, location, data }) {
   return (
     <Layout location={location}>
       <div className="padding">
-        <h1>{pageContext.tag}</h1>
+        <h1 className="title">{pageContext.tag}</h1>
         <div className="content-grid">
           {data.allMarkdownRemark.edges.map(edge => (
             <div key={edge.node.id} className="card">
               <Link className="nav-link" to={`/${edge.node.fields.slug}`}>
-                <h2 className="card-heading">{edge.node.frontmatter.title}</h2>
+                <h2 className="card-heading title">
+                  {edge.node.frontmatter.title}
+                </h2>
                 <p className="card-text">{edge.node.frontmatter.description}</p>
               </Link>
               <div className="card-text">

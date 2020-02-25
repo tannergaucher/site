@@ -7,7 +7,7 @@ export const useLatestPosts = () => {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/posts/" } }
           sort: { fields: frontmatter___date, order: DESC }
-          limit: 6
+          limit: 5
         ) {
           edges {
             node {
