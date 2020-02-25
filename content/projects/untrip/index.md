@@ -4,12 +4,13 @@ description: "Curate static content into dynamic lists and share on social media
 uses:
   [
     "Gatsby",
-    "Sanity  CMS",
+    "Sanity headless CMS",
     "Apollo Client",
     "React Hooks Apollo",
     "Apollo Server",
     "JWT authentication",
     "Prisma Client",
+    "Heroku",
   ]
 deployedUrl: "https://untrip.app"
 vimeoUrl: "https://player.vimeo.com/video/387479423"

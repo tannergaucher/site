@@ -12,18 +12,20 @@ const Layout = ({ location, children }) => {
   return (
     <>
       <header className="header padding">
-        <Link to="/" className="nav-link">
-          <h4 className="site-title">{title}</h4>
-        </Link>
-        <Navlinks location={location} />
+        {location.pathname !== "/" && (
+          <>
+            <Link to="/" className="nav-link">
+              <h4 className="site-title title">{title}</h4>
+            </Link>
+            <Navlinks location={location} />
+          </>
+        )}
       </header>
       <main className="main">{children}</main>
       <footer className="footer padding">
-        <h4 className="site-title">
-          <Link to="/" className="nav-link">
-            {title}
-          </Link>
-        </h4>
+        <Link to="/" className="nav-link">
+          <h4 className="site-title title">{title}</h4>
+        </Link>
       </footer>
     </>
   )

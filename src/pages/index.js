@@ -1,43 +1,33 @@
-import { Layout, SEO } from "../components"
+import {
+  Bio,
+  ContactSection,
+  LatestPhotosSection,
+  LatestPostsSection,
+  LatestProjectsSection,
+  Layout,
+  SEO,
+} from "../components"
 
-import { Link } from "gatsby"
 import React from "react"
-import { kebabCase } from "lodash"
-import { useLatestPosts } from "../hooks"
 
-const IndexPage = ({ location }) => {
-  const { edges } = useLatestPosts()
+const Hr = () => <hr style={{ margin: `var(--space-xl) var(--space-sm)` }} />
 
+export default function IndexPage({ location }) {
   return (
     <Layout location={location}>
-      <article className="padding page">
+      <article>
         <SEO title="Home" />
-        <div className="content-grid">
-          {edges.map(edge => (
-            <div key={edge.node.id} className="card">
-              <Link className="nav-link" to={edge.node.fields.slug}>
-                <h2 className="card-heading title">
-                  {edge.node.frontmatter.title}
-                </h2>
-              </Link>
-              <p className="card-text">{edge.node.frontmatter.description}</p>
-              <div className="card-text">
-                {edge.node.frontmatter.tags.map(tag => (
-                  <Link
-                    className="nav-link"
-                    key={tag}
-                    to={`/posts/${kebabCase(tag)}`}
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <Bio />
+        <Hr />
+        <LatestPostsSection />
+        <Hr />
+        <LatestProjectsSection />
+        <Hr />
+        <LatestPhotosSection />
+        <Hr />
+        <ContactSection />
+        <br />
       </article>
     </Layout>
   )
 }
-
-export default IndexPage

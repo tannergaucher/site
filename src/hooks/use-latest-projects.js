@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useLatestProjects = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -7,7 +7,7 @@ export const useLatestProjects = () => {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/projects/" } }
           sort: { fields: frontmatter___date, order: DESC }
-          limit: 2
+          limit: 5
         ) {
           edges {
             node {
