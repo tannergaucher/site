@@ -27,6 +27,7 @@ export default function Bio() {
           <h3>Contact</h3>
         </a>
       </nav>
+      <br />
     </section>
   )
 }

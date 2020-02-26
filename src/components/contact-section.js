@@ -2,9 +2,15 @@ import React from "react"
 
 export default function ContactSection() {
   return (
-    <section className="container center padding">
-      <h2 id="contact">Contact</h2>
-      <br />
+    <section className="padding">
+      <h2
+        className="text--xxl"
+        id="contact"
+        style={{ margin: `var(--space-xl) 0` }}
+      >
+        Contact
+      </h2>
+
       <fieldset className="fieldset">
         <form
           className="form"
@@ -40,6 +46,7 @@ export default function ContactSection() {
           </button>
         </form>
       </fieldset>
+      <br />
     </section>
   )
 }

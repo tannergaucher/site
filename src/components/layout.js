@@ -10,7 +10,7 @@ const Layout = ({ location, children }) => {
   const { title } = useSiteMetadata()
 
   return (
-    <>
+    <div className="center" style={{ maxWidth: `var(--max-width)` }}>
       <header className="header padding">
         {location.pathname !== "/" && (
           <>
@@ -27,7 +27,7 @@ const Layout = ({ location, children }) => {
           <h4 className="site-title title">{title}</h4>
         </Link>
       </footer>
-    </>
+    </div>
   )
 }
 

@@ -13,7 +13,7 @@ export default function PhotoTemplate({ data, pageContext, location }) {
 
   return (
     <Layout location={location}>
-      <article className="page container center">
+      <article className="page center">
         <figure className="figure">
           <Img
             fluid={image.myImage.asset.fluid}
@@ -23,7 +23,7 @@ export default function PhotoTemplate({ data, pageContext, location }) {
             <time
               style={{ color: `var(--grey)`, marginRight: `var(--space-sm)` }}
             >
-              <small> {formattedDateTime}.</small>
+              <small className="padding"> {formattedDateTime}</small>
             </time>
           </figcaption>
         </figure>
