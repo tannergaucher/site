@@ -4,9 +4,9 @@ import React from "react"
 export default function ProjectCard({ project }) {
   return (
     <div className="card" key={project.id}>
-      <Link className="nav-link">
+      <a href={project.frontmatter.deployedUrl} className="nav-link">
         <h2 className="card-heading title">{project.frontmatter.title}</h2>
-      </Link>
+      </a>
       <p className="card-text">{project.frontmatter.description}</p>
       <div className="card-text">
         <ul>
