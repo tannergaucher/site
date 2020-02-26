@@ -12,6 +12,7 @@ export default function PostsPage({ location }) {
     <Layout location={location}>
       <article className="padding page">
         <SEO title="Posts" />
+        <h1 className="text--xxxl">Posts</h1>
         <div className="content-grid">
           {edges.map(edge => (
             <PostCard post={edge.node} />

@@ -9,17 +9,18 @@ export default function LatestPostsSection() {
 
   return (
     <section className="padding">
+      <Link className="nav-link" to="/posts">
+        <h2 className="text--xxl">
+          Posts <span>&#8594;</span>
+        </h2>
+      </Link>
+      <br />
       <div className="content-grid">
         {edges.map(edge => (
           <PostCard post={edge.node} />
         ))}
       </div>
       <br />
-      <div className="container center">
-        <Link className="nav-link" to="/posts">
-          <h2>Posts &#8594;</h2>
-        </Link>
-      </div>
     </section>
   )
 }

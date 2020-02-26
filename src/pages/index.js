@@ -10,7 +10,7 @@ import {
 
 import React from "react"
 
-const Hr = () => <hr style={{ margin: `var(--space-xl) var(--space-sm)` }} />
+const Hr = () => <hr style={{ margin: `var(--space-lg) var(--space-sm)` }} />
 
 export default function IndexPage({ location }) {
   return (

@@ -8,6 +8,9 @@ export default function LatestPhotosSection() {
 
   return (
     <section className="only-fullscreen-padding">
+      <Link to="/photos" className="nav-link">
+        <h2 className="text--xxl padding">Photos &#8594;</h2>
+      </Link>
       <div className="image-grid">
         {edges.map(edge => (
           <Link to={`/photo/${edge.node.slug.current}`}>
@@ -16,11 +19,6 @@ export default function LatestPhotosSection() {
         ))}
       </div>
       <br />
-      <div className="container center">
-        <Link to="/photos" className="nav-link">
-          <h2>Photos &#8594;</h2>
-        </Link>
-      </div>
     </section>
   )
 }
