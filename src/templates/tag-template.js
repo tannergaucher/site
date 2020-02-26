@@ -6,7 +6,7 @@ import { kebabCase } from "lodash"
 export default function TagTemplate({ pageContext, location, data }) {
   return (
     <Layout location={location}>
-      <div className="container">
+      <div className="container padding">
         <h1 className="title">{pageContext.tag}</h1>
         <div className="content-grid">
           {data.allMarkdownRemark.edges.map(edge => (

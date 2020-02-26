@@ -35,7 +35,7 @@
   --paragraph-letter-spacing: 0rem;
   --caps-letter-spacing: 0.1rem;
   --text-base-size: calc(1rem + var(--responsive-unit));
-  --text-scale-ratio: 1.17;
+  --text-scale-ratio: 1.11;
 
   /* VARIABLES BELOW THIS HAVE DERIVED / CALCULATED VALUES: ADJUSTING THEM CAN BREAK THE SYSTEM. TREAD LIGHTLY  */
 
@@ -267,7 +267,7 @@ pre[class*="language-"] {
   font-family: var(--mono);
   font-size: var(--text-sm);
   margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   border-radius: var(--radius);
 }
 
