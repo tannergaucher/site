@@ -1,8 +1,6 @@
 import { Layout, PostCard, SEO } from "../components"
 
-import { Link } from "gatsby"
 import React from "react"
-import { kebabCase } from "lodash"
 import { useLatestPosts } from "../hooks"
 
 export default function PostsPage({ location }) {

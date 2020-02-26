@@ -1,7 +1,10 @@
 import { Navlink } from "."
 import React from "react"
+import { useSiteMetadata } from "../hooks"
 
 export default function Navlinks({ location }) {
+  const { social } = useSiteMetadata()
+
   return (
     <nav className="nav">
       <Navlink text="Posts" to="/posts" location={location} />
@@ -17,7 +20,7 @@ export default function Navlinks({ location }) {
             Contact
           </a>
           <a
-            href="#"
+            href={social.github}
             className="navlink"
             style={{
               textDecoration: `none`,

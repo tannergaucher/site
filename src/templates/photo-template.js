@@ -13,19 +13,18 @@ export default function PhotoTemplate({ data, pageContext, location }) {
 
   return (
     <Layout location={location}>
-      <article className="page center">
+      <article className="page center container">
         <figure className="figure">
-          <Img
-            fluid={image.myImage.asset.fluid}
-            style={{ boxShadow: `var(--elevation-3)` }}
-          />
-          <figcaption className="figcaption  only-mobile-padding">
-            <time
-              style={{ color: `var(--grey)`, marginRight: `var(--space-sm)` }}
-            >
-              <small className="padding"> {formattedDateTime}</small>
-            </time>
-          </figcaption>
+          <Img fluid={image.myImage.asset.fluid} />
+          <div className="container">
+            <figcaption className="figcaption  only-mobile-padding">
+              <time>
+                <small className="only-fullscreen-padding">
+                  {formattedDateTime}
+                </small>
+              </time>
+            </figcaption>
+          </div>
         </figure>
         <br />
       </article>

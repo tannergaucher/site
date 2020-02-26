@@ -1,5 +1,4 @@
 import {
-  Bio,
   ContactSection,
   LatestPhotosSection,
   LatestPostsSection,
