@@ -1,1 +1,10 @@
-# [Gatsby Theme Semantic Styles](https://gatsby-theme-semantic-styles.netlify.com/)
+# [Tannergaucher.com](https://tannergaucher.com)
+
+## Blog + Portfolio + Photo Journal
+
+## Uses
+
+- Gatsby
+- Sanity CDN + gatsby image for fast, optimized images
+- [Semantic styles](https://github.com/tannergaucher/semantic-styles)
+- Deployed to Netlify
