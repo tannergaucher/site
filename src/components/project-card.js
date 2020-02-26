@@ -28,7 +28,7 @@ export default function ProjectCard({ project }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Source
+          <h4>Source</h4>
         </a>
         {project.frontmatter.vimeoUrl && (
           <a
@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Demo
+            <h4>Demo</h4>
           </a>
         )}
       </nav>

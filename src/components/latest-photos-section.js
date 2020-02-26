@@ -17,7 +17,7 @@ export default function LatestPhotosSection() {
       <br />
       <div className="image-grid">
         {edges.map(edge => (
-          <Link to={`/photo/${edge.node.slug.current}`}>
+          <Link to={`/photo/${edge.node.slug.current}`} key={edge.node.id}>
             <Image fluid={edge.node.myImage.asset.fluid} />
           </Link>
         ))}

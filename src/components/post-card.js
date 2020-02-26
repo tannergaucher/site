@@ -13,8 +13,8 @@ export default function PostCard({ post }) {
         <br />
       </div>
       <nav className="nav">
-        {post.frontmatter.tags.map(tag => (
-          <Link key={tag} to={`/posts/${kebabCase(tag)}`} className="nav-link">
+        {post.frontmatter.tags.map((tag, i) => (
+          <Link key={i} to={`/posts/${kebabCase(tag)}`} className="nav-link">
             <h4 className="card-heading">{tag}</h4>
           </Link>
         ))}

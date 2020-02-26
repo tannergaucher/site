@@ -13,7 +13,7 @@ export default function PhotoPage({ location }) {
       <SEO title="Photos" />
       <div className="page image-grid only-fullscreen-padding">
         {edges.map(edge => (
-          <Link to={`/photo/${edge.node.slug.current}`}>
+          <Link to={`/photo/${edge.node.slug.current}`} key={edge.node.id}>
             <Img key={edge.node.id} fluid={edge.node.myImage.asset.fluid} />
           </Link>
         ))}

@@ -12,7 +12,7 @@ export default function PostsPage({ location }) {
         <SEO title="Posts" />
         <div className="content-grid">
           {edges.map(edge => (
-            <PostCard post={edge.node} />
+            <PostCard post={edge.node} key={edge.node.id} />
           ))}
         </div>
       </article>

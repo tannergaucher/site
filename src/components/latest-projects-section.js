@@ -14,7 +14,7 @@ export default function LatestProjectsSection() {
       </Link>
       <div className="content-grid">
         {edges.map(edge => (
-          <ProjectCard project={edge.node} />
+          <ProjectCard project={edge.node} key={edge.node.id} />
         ))}
       </div>
     </section>

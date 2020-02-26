@@ -14,7 +14,7 @@ export default function LatestPostsSection() {
       </Link>
       <div className="content-grid">
         {edges.map(edge => (
-          <PostCard post={edge.node} />
+          <PostCard post={edge.node} key={edge.node.id} />
         ))}
       </div>
     </section>
