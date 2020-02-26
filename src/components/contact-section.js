@@ -2,7 +2,8 @@ import React from "react"
 
 export default function ContactSection() {
   return (
-    <section className="padding">
+    <section className="padding container">
+      <hr />
       <h2
         className="text--xxl"
         id="contact"

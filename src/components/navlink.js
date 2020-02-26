@@ -7,6 +7,7 @@ const Navlink = ({ text, to, location }) => {
       data-is-active={location.pathname === to}
       to={to}
       className="nav-link navlink"
+      style={{ fontSize: `var(--text-md)` }}
     >
       {text}
     </Link>

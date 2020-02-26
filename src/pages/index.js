@@ -10,21 +10,17 @@ import {
 
 import React from "react"
 
-const Hr = () => <hr style={{ margin: `var(--space-lg) var(--space-sm)` }} />
-
 export default function IndexPage({ location }) {
   return (
     <Layout location={location}>
       <article>
         <SEO title="Home" />
-        <Bio />
-        <Hr />
         <LatestPostsSection />
-        <Hr />
+        <br />
         <LatestProjectsSection />
-        <Hr />
+        <br />
         <LatestPhotosSection />
-        <Hr />
+        <br />
         <ContactSection />
         <br />
       </article>
