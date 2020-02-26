@@ -14,6 +14,7 @@ export default function LatestPhotosSection() {
           <h2 className="padding">Photos</h2>
         </Link>
       </div>
+      <br />
       <div className="image-grid">
         {edges.map(edge => (
           <Link to={`/photo/${edge.node.slug.current}`}>
