@@ -1,4 +1,3 @@
-import Bio from "./bio"
 import ContactSection from "./contact-section"
 import Image from "./image"
 import LatestPhotosSection from "./latest-photos-section"
@@ -18,7 +17,6 @@ export {
   Navlinks,
   SEO,
   ContactSection,
-  Bio,
   LatestPhotosSection,
   LatestPostsSection,
   LatestProjectsSection,

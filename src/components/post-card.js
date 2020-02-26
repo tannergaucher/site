@@ -10,6 +10,7 @@ export default function PostCard({ post }) {
           <h2 className="card-heading title">{post.frontmatter.title}</h2>
         </Link>
         <p className="card-text">{post.frontmatter.description}</p>
+        <br />
       </div>
       <nav className="nav">
         {post.frontmatter.tags.map(tag => (

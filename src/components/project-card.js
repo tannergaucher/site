@@ -1,10 +1,14 @@
-import { Link } from "gatsby"
 import React from "react"
 
 export default function ProjectCard({ project }) {
   return (
     <div className="card" key={project.id}>
-      <a href={project.frontmatter.deployedUrl} className="nav-link">
+      <a
+        href={project.frontmatter.deployedUrl}
+        className="nav-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <h2 className="card-heading title">{project.frontmatter.title}</h2>
       </a>
       <p className="card-text">{project.frontmatter.description}</p>

@@ -10,14 +10,18 @@ export default function PostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO title="Posts" />
-      <article className="padding page">
+      <article className="page container padding">
         <time>
           <small>{post.frontmatter.date}</small>
         </time>
-        <h1 className="title">{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.description}</h2>
+        <h1
+          className="title text--xxxl"
+          style={{ margin: `var(--space-lg) 0` }}
+        >
+          {post.frontmatter.title}
+        </h1>
+        <h2 className="text--xxl">{post.frontmatter.description}</h2>
         <hr />
-        <br />
         <div
           className="post-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
