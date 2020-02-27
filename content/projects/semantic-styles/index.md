@@ -1,6 +1,6 @@
 ---
 title: "Semantic Styles"
-description: "Rapid UI prototyping with one stylesheet and CSS variables"
+description: "Quick UI prototyping with one stylesheet and CSS variables."
 uses:
   [
     "Responsive typography and spacing",

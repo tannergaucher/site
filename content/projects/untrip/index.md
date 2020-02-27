@@ -1,6 +1,6 @@
 ---
 title: "Untrip.app"
-description: "Curate static content into dynamic lists and share on social media"
+description: "Curate static content into dynamic lists and share on social media."
 uses:
   [
     "Gatsby",
@@ -9,8 +9,9 @@ uses:
     "React Hooks Apollo",
     "Apollo Server",
     "JWT authentication",
-    "Prisma Client",
-    "Heroku",
+    "Prisma Client DB layer",
+    "Heroku server",
+    "Netlify",
   ]
 deployedUrl: "https://untrip.app"
 vimeoUrl: "https://player.vimeo.com/video/387479423"

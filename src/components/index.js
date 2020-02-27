@@ -1,5 +1,4 @@
 import ContactSection from "./contact-section"
-import Image from "./image"
 import LatestPhotosSection from "./latest-photos-section"
 import LatestPostsSection from "./latest-posts-section"
 import LatestProjectsSection from "./latest-projects-section"
@@ -11,7 +10,6 @@ import ProjectCard from "./project-card"
 import SEO from "./seo"
 
 export {
-  Image,
   Layout,
   Navlink,
   Navlinks,

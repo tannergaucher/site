@@ -8,11 +8,10 @@ import { useSiteMetadata } from "../hooks"
 
 const Layout = ({ location, children }) => {
   const { title, description, social } = useSiteMetadata()
-
   const isIndexPage = location.pathname === "/"
 
   return (
-    <div className="center" style={{ maxWidth: `var(--max-width)` }}>
+    <>
       <header className="header container padding">
         <Link to="/" className="nav-link">
           {isIndexPage ? (
@@ -48,7 +47,7 @@ const Layout = ({ location, children }) => {
           <h4 className="site-title title">{title}</h4>
         </Link>
       </footer>
-    </div>
+    </>
   )
 }
 
