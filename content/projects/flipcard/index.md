@@ -1,15 +1,15 @@
 ---
 title: "Flipcard.fun"
-description: "Share jokes with friends on a card that flips"
+description: "Share jokes with friends on a card that flips."
 uses:
   [
-    "React Context API",
-    "React Hooks",
+    "State management with React Hooks / Context API",
     "React Spring animation",
     "Web share API",
-    "Netlify lambda functions",
     "JWT authentication",
+    "Netlify lambda functions",
     "MongoDB Atlas",
+    "Netlify",
   ]
 deployedUrl: "https://flipcard.fun"
 vimeoUrl: ""

@@ -11,7 +11,6 @@ export default function ContactSection() {
       >
         Contact
       </h2>
-
       <fieldset className="fieldset">
         <form
           className="form"
@@ -19,7 +18,7 @@ export default function ContactSection() {
           method="POST"
           data-netlify="true"
         >
-          {/* Hidden input is here because of netlify form */}
+          {/* Hidden input is here for netlify form */}
           <input
             className="input"
             type="hidden"
