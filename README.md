@@ -7,4 +7,4 @@
 - Gatsby
 - Sanity CDN + gatsby image for fast, optimized images
 - [Semantic styles](https://github.com/tannergaucher/semantic-styles)
-- Deployed to Netlify
+- Netlify
