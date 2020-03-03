@@ -6,5 +6,3 @@
 
 - Gatsby
 - Sanity CDN + gatsby image for optimized images
-- [Semantic styles](https://github.com/tannergaucher/semantic-styles)
-- Netlify
