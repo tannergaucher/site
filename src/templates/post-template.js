@@ -31,7 +31,7 @@ export default function PostTemplate({ data, pageContext, location }) {
         <section>
           {next && (
             <>
-              <small>Next</small>
+              <h4>Next</h4>
               <Link to={next.fields.slug} className="nav-link">
                 <h2 className="title">{next.frontmatter.title}</h2>
               </Link>
@@ -39,12 +39,13 @@ export default function PostTemplate({ data, pageContext, location }) {
           )}
           {previous && (
             <>
-              <small>Previous</small>
+              <h4>Previous</h4>
               <Link to={previous.fields.slug} className="nav-link">
                 <h2 className="title">{previous.frontmatter.title}</h2>
               </Link>
             </>
           )}
+          <br />
         </section>
         <br />
       </article>
