@@ -3,7 +3,7 @@ title: "Flipcard.fun"
 description: "Share jokes with friends on a card that flips."
 uses:
   [
-    "State management with React Hooks / Context API",
+    "State management with React Context API + Hooks",
     "React Spring animation",
     "Web share API",
     "JWT authentication",
@@ -12,6 +12,6 @@ uses:
     "Netlify",
   ]
 deployedUrl: "https://flipcard.fun"
-vimeoUrl: ""
+vimeoUrl: "https://player.vimeo.com/video/396019753"
 githubRepo: "https://github.com/tannergaucher/flip-card"
 ---
