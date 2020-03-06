@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4>Demo</h4>
+            <h4>Video </h4>
           </a>
         )}
       </nav>
