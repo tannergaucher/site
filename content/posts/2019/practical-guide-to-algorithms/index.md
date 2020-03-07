@@ -173,7 +173,7 @@ memoizeTimes20(8) // cached
 1. Identify base case (when it is you want your loop to stop)
 2. Identify recursive case (the work that you want to do)
 3. Return where appropriate
-4. Write procedures for each case that bring you closer to the base case(otherwise infinite loop)
+4. Write procedures for each case that bring you closer to the base case (otherwise infinite loop)
 
 ### Recursion patterns
 
@@ -427,7 +427,7 @@ mergeSort(list) // => [1, 2, 2, 3, 3, 5, 6, 7, 8]
 - Always take the locally optimal solution
 - Without considering the big picture
 - Given a decision, do the one that looks like the best decision at that time, without considering the big picture
-- Always making the locally optimal choice does **_not_** always give the optimal solution.
+- Always making the locally optimal choice does **_not_** always give the optimal solution
 
 > ### Using greedy algorithms
 >
