@@ -12,7 +12,6 @@ export default function LatestPostsSection() {
       <Link to="/posts" className="nav-link">
         <h2>View All Posts &#8594;</h2>
       </Link>
-      <br />
       <div className="content-grid">
         {edges.map(edge => (
           <PostCard post={edge.node} key={edge.node.id} />
