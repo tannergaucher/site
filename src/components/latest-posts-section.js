@@ -9,18 +9,10 @@ export default function LatestPostsSection() {
   return (
     <section className="container padding">
       <hr />
-      <div
-        className="scroll-margin-top"
-        style={{
-          position: `sticky`,
-          top: `0`,
-          background: `var(--bg-1)`,
-        }}
-      >
-        <Link to="/posts" className="nav-link">
-          <h2>View All Posts</h2>
-        </Link>
-      </div>
+      <Link to="/posts" className="nav-link">
+        <h2>View All Posts &#8594;</h2>
+      </Link>
+      <br />
       <div className="content-grid">
         {edges.map(edge => (
           <PostCard post={edge.node} key={edge.node.id} />

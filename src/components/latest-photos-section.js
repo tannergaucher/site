@@ -11,7 +11,7 @@ export default function LatestPhotosSection() {
       <div className="container padding">
         <hr />
         <Link to="/photos" className="nav-link">
-          <h2 className="padding">Photos</h2>
+          <h2 className="padding">View All Photos &#8594;</h2>
         </Link>
       </div>
       <br />

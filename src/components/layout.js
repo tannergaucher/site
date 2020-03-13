@@ -15,7 +15,10 @@ const Layout = ({ location, children }) => {
         <div style={{ display: `flex`, flexDirection: `column` }}>
           <Link to="/" className="nav-link">
             {isIndexPage ? (
-              <h1 className="title" style={{ marginTop: `var(--space-xl)` }}>
+              <h1
+                className="title text--xxxl"
+                style={{ marginBottom: `var(--space-lg)` }}
+              >
                 {title}
               </h1>
             ) : (
@@ -24,24 +27,14 @@ const Layout = ({ location, children }) => {
           </Link>
           {isIndexPage && (
             <>
-              <h2>{description}</h2>{" "}
+              <h2>{description}</h2>
+              <br />
               <nav className="nav">
-                <a
-                  href="#contact"
-                  className="nav-link navlink"
-                  style={{ textDecoration: `none` }}
-                >
-                  Contact
+                <a href="#contact" className="nav-link">
+                  <h3>Contact</h3>
                 </a>
-                <a
-                  href={social.github}
-                  className="nav-link navlink"
-                  style={{
-                    textDecoration: `none`,
-                    marginLeft: `var(--space-sm)`,
-                  }}
-                >
-                  Github
+                <a href={social.github} className="nav-link">
+                  <h3>Github</h3>
                 </a>
               </nav>
             </>

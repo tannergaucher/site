@@ -10,6 +10,7 @@ export default function PostsPage({ location }) {
     <Layout location={location}>
       <article className="container page padding">
         <SEO title="Posts" />
+        <h1 className="title text--xxxl">Posts</h1>
         <div className="content-grid">
           {edges.map(edge => (
             <PostCard post={edge.node} key={edge.node.id} />
