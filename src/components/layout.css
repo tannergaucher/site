@@ -37,9 +37,9 @@
   --text-base-size: calc(1rem + var(--responsive-unit));
   --text-scale-ratio: 1.11;
 
-  /* VARIABLES BELOW THIS HAVE DERIVED / CALCULATED VALUES: ADJUSTING THEM CAN BREAK THE SYSTEM. TREAD LIGHTLY  */
+  /* VARIABLES BELOW HAVE CALCULATED VALUES: ADJUSTING THEM BREAKS THE SYSTEM */
 
-  /* Type Scale */
+  /* CALCULATED TYPOGRAPHY   */
   --text-xs: calc(
     1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)) +
       var(--responsive-unit)
@@ -63,13 +63,14 @@
       var(--text-scale-ratio) * var(--text-scale-ratio) *
       var(--text-scale-ratio) + var(--responsive-unit)
   );
-  /* Calculated Spacing */
+
+  /*  SPACING */
   --space-sm: calc(var(--baseline) / 2);
   --space-md: var(--baseline);
   --space-lg: calc(var(--baseline) * 2);
   --space-xl: calc(var(--baseline) * 4);
-  /* Derived Component Colors */
 
+  /* Derived Component Colors */
   --href-color: var(--accent-1);
   --href-hover-color: var(--accent-2);
   --btn-bg: var(--bg-1);
@@ -114,6 +115,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: var(--bg-1);
   color: var(--text-color);
+  display: block;
 }
 
 a {
@@ -434,8 +436,6 @@ hr {
   font-size: var(--text-md);
 }
 
-/* TODO: REMOVE */
-
 .nav-link {
   text-decoration: none;
   margin-right: var(--space-md);
@@ -591,5 +591,6 @@ hr {
 
 /* LOCAL */
 
-.gatsby-image-wrapper {
+.scroll-margin-top {
+  scroll-margin-top: var(--space-md);
 }
