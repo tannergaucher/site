@@ -1,7 +1,6 @@
 import "./layout.css"
 
 import { Link } from "gatsby"
-import { Navlinks } from "."
 import PropTypes from "prop-types"
 import React from "react"
 import { useSiteMetadata } from "../hooks"
@@ -13,33 +12,41 @@ const Layout = ({ location, children }) => {
   return (
     <>
       <header className="header container padding">
-        <Link to="/" className="nav-link">
-          {isIndexPage ? (
-            <h1 className="title" style={{ marginTop: `var(--space-xl)` }}>
-              {title}
-            </h1>
-          ) : (
-            <h4 className="title site-title">{title}</h4>
+        <div style={{ display: `flex`, flexDirection: `column` }}>
+          <Link to="/" className="nav-link">
+            {isIndexPage ? (
+              <h1 className="title" style={{ marginTop: `var(--space-xl)` }}>
+                {title}
+              </h1>
+            ) : (
+              <h4 className="title site-title">{title}</h4>
+            )}
+          </Link>
+          {isIndexPage && (
+            <>
+              <h2>{description}</h2>{" "}
+              <nav className="nav">
+                <a
+                  href="#contact"
+                  className="nav-link navlink"
+                  style={{ textDecoration: `none` }}
+                >
+                  Contact
+                </a>
+                <a
+                  href={social.github}
+                  className="nav-link navlink"
+                  style={{
+                    textDecoration: `none`,
+                    marginLeft: `var(--space-sm)`,
+                  }}
+                >
+                  Github
+                </a>
+              </nav>
+            </>
           )}
-        </Link>
-        {isIndexPage && <h2>{description}</h2>}
-        {isIndexPage ? (
-          <nav className="nav" style={{ marginTop: `var(--space-md)` }}>
-            <a
-              className="nav-link"
-              href={social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2 style={{ margin: `0` }}>Github</h2>
-            </a>
-            <a className="nav-link" href="#contact">
-              <h2 style={{ margin: `0` }}>Contact</h2>
-            </a>
-          </nav>
-        ) : (
-          <Navlinks location={location} />
-        )}
+        </div>
       </header>
       <main className="main">{children}</main>
       <footer className="footer padding container">

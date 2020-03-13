@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tanner Gaucher`,
-    description: `Software developer currently seeking a frontend to fullstack position in NYC / remote.`,
+    description: `Software Engineer Based in Brooklyn, NY`,
     author: `<tannermichaelgaucher@gmail>`,
     social: {
       github: `https://github.com/tannergaucher`,
