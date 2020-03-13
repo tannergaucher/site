@@ -11,5 +11,5 @@ uses:
   ]
 deployedUrl: "https://semantic-styles.netlify.com"
 vimeoUrl: ""
-githubRepo: "https://github.com/tannergaucher/semantic-styles/blob/master/src/components/index.css"
+githubRepo: "https://github.com/tannergaucher/semantic-styles-design-system"
 ---
