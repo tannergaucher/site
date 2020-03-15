@@ -13,7 +13,7 @@ export default function PhotoTemplate({ data, pageContext, location }) {
 
   return (
     <Layout location={location}>
-      <article className="page center container">
+      <article className="center container">
         <figure className="figure">
           <Img fluid={image.myImage.asset.fluid} />
           <div className="container">
