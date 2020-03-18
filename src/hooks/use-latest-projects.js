@@ -6,8 +6,7 @@ export const useLatestProjects = () => {
       query USE_LATEST_PROJECTS {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/projects/" } }
-          sort: { fields: frontmatter___date, order: DESC }
-          limit: 5
+          limit: 6
         ) {
           edges {
             node {
