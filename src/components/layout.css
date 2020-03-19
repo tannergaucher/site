@@ -356,7 +356,7 @@ hr {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .card:hover {
@@ -502,6 +502,7 @@ hr {
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: baseline;
   grid-gap: var(--space-lg) var(--space-sm);
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
