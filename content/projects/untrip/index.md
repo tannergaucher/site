@@ -1,6 +1,6 @@
 ---
 title: "Untrip.app"
-description: "Curate static content into dynamic lists and share on social media."
+description: "Builds CMS content into a fast loading static site and hydrates into a full stack GraphQL app with users, dynamic lists, comments."
 uses:
   [
     "Gatsby",
