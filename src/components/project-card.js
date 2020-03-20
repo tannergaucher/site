@@ -15,9 +15,7 @@ export default function ProjectCard({ project }) {
       <div className="card-text">
         <ul>
           {project.frontmatter.uses.map(tech => (
-            <li key={tech}>
-              <small>{tech}</small>
-            </li>
+            <li key={tech}>{tech}</li>
           ))}
         </ul>
       </div>
