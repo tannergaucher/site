@@ -1,19 +1,15 @@
+/* OVERRIDE SYSTEM CLASSES AND VARIABLES */
+
 .container {
   max-width: none;
   margin-left: var(--space-lg);
   margin-right: var(--space-lg);
 }
 
-/* 850px === var--max-width */
+/* Because 850px === var--max-width */
 @media (max-width: 850px) {
   .container {
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-/* LOCAL STYLES */
-
-.next-prev {
-  margin-bottom: 0;
 }
