@@ -13,15 +13,13 @@ export default function PhotoTemplate({ data, pageContext, location }) {
 
   return (
     <Layout location={location}>
-      <article className="center container">
+      <article>
         <figure className="figure">
           <Img fluid={image.myImage.asset.fluid} />
-          <div className="container">
-            <figcaption className="figcaption  only-mobile-padding">
+          <div className="container center">
+            <figcaption className="figcaption only-mobile-padding">
               <time>
-                <small className="only-fullscreen-padding">
-                  {formattedDateTime}
-                </small>
+                <small>{formattedDateTime}</small>
               </time>
             </figcaption>
           </div>

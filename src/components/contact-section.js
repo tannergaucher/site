@@ -2,7 +2,7 @@ import React from "react"
 
 export default function ContactSection() {
   return (
-    <section className="padding container">
+    <section className="padding container center">
       <hr />
       <h2
         className="text--xxl"

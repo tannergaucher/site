@@ -8,10 +8,7 @@ export default function LatestPhotosSection() {
 
   return (
     <section className="only-fullscreen-padding">
-      <div
-        className="container padding"
-        style={{ marginBottom: `var(--space-xl)` }}
-      >
+      <div className="container center">
         <hr />
         <Link to="/photos" className="nav-link">
           <h2 className="padding">View All Photos &#8594;</h2>
