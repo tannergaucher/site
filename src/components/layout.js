@@ -3,7 +3,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import "semantic-styles"
+
 import "../styles/overrides.css"
+import "../styles/local.css"
 
 import { useSiteMetadata } from "../hooks"
 
