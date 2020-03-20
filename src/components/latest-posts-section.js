@@ -8,14 +8,10 @@ export default function LatestPostsSection() {
 
   return (
     <section className="padding">
-      <div className="container center">
-        <hr />
-        <Link to="/posts" className="nav-link">
-          <h2 style={{ marginTop: `var(--space-xl)` }}>
-            View All Posts &#8594;
-          </h2>
-        </Link>
-      </div>
+      <hr />
+      <Link to="/posts" className="nav-link">
+        <h2>View All Posts &#8594;</h2>
+      </Link>
       <div className="content-grid">
         {edges.map(edge => (
           <PostCard post={edge.node} key={edge.node.id} />

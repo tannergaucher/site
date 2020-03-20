@@ -7,13 +7,11 @@ export default function LatestPhotosSection() {
   const { edges } = useLatestMyImages()
 
   return (
-    <section className="only-fullscreen-padding">
-      <div className="container center">
-        <hr />
-        <Link to="/photos" className="nav-link">
-          <h2 className="padding">View All Photos &#8594;</h2>
-        </Link>
-      </div>
+    <section className="padding">
+      <hr />
+      <Link to="/photos" className="nav-link">
+        <h2 className="padding">View All Photos &#8594;</h2>
+      </Link>
       <div className="image-grid">
         {edges.map(edge => (
           <Link to={`/photo/${edge.node.slug.current}`} key={edge.node.id}>

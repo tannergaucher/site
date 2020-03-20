@@ -4,7 +4,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import moment from "moment"
 
-export default function PhotoTemplate({ data, pageContext, location }) {
+export default function PhotoTemplate({ data, location }) {
   const image = data.sanityMyImage
 
   const formattedDateTime = moment(
@@ -16,13 +16,11 @@ export default function PhotoTemplate({ data, pageContext, location }) {
       <article>
         <figure className="figure">
           <Img fluid={image.myImage.asset.fluid} />
-          <div className="container center">
-            <figcaption className="figcaption only-mobile-padding">
-              <time>
-                <small>{formattedDateTime}</small>
-              </time>
-            </figcaption>
-          </div>
+          <figcaption className="figcaption container padding">
+            <time>
+              <small>{formattedDateTime}</small>
+            </time>
+          </figcaption>
         </figure>
         <br />
       </article>

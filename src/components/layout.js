@@ -3,9 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import "semantic-styles"
-
-import "../styles/system-overrides.css"
-import "../styles/my-styles.css"
+import "../styles/overrides.css"
 
 import { useSiteMetadata } from "../hooks"
 
@@ -15,24 +13,20 @@ const Layout = ({ location, children }) => {
 
   return (
     <>
-      <header className="header container center padding">
+      <header className="header padding container">
         <div style={{ display: `flex`, flexDirection: `column` }}>
           <Link to="/" className="nav-link">
             {isIndexPage ? (
-              <h1
-                className="title text--xxxl"
-                style={{ marginBottom: `var(--space-lg)` }}
-              >
+              <h1 className="title" style={{ marginBottom: `var(--space-sm)` }}>
                 {title}
               </h1>
             ) : (
-              <h4 className="title site-title">{title}</h4>
+              <h4 className="title">{title}</h4>
             )}
           </Link>
           {isIndexPage && (
             <>
-              <h2>{description}</h2>
-              <br />
+              <p style={{ marginBottom: `var(--space-sm)` }}>{description}</p>
               <nav className="nav">
                 <a href="#contact" className="nav-link">
                   <h3>Contact</h3>
@@ -46,7 +40,7 @@ const Layout = ({ location, children }) => {
         </div>
       </header>
       <main className="main">{children}</main>
-      <footer className="footer only-mobile-padding container center">
+      <footer className="footer padding container">
         <Link to="/" className="nav-link">
           <h4 className="site-title title">{title}</h4>
         </Link>

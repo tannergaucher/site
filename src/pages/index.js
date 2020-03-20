@@ -12,7 +12,7 @@ import React from "react"
 export default function IndexPage({ location }) {
   return (
     <Layout location={location}>
-      <article>
+      <article className="container">
         <SEO title="Home" />
         <LatestPostsSection />
         <br />

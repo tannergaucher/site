@@ -10,7 +10,14 @@ export default function PostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO title="Posts" />
-      <article className="page padding container center">
+      <article
+        className="page padding container"
+        style={{
+          maxWidth: `var(--container)`,
+          marginLeft: `auto`,
+          marginRight: `auto`,
+        }}
+      >
         <time>
           <small>{post.frontmatter.date}</small>
         </time>
@@ -20,7 +27,7 @@ export default function PostTemplate({ data, pageContext, location }) {
         >
           {post.frontmatter.title}
         </h1>
-        <h2 className="text--xxl">{post.frontmatter.description}</h2>
+        <p>{post.frontmatter.description}</p>
         <hr />
         <div
           className="post-body"
@@ -31,7 +38,7 @@ export default function PostTemplate({ data, pageContext, location }) {
         <section>
           {next && (
             <>
-              <h4>Next</h4>
+              <h4 className="next-prev">Next</h4>
               <Link to={next.fields.slug} className="nav-link">
                 <h2 className="title">{next.frontmatter.title}</h2>
               </Link>
@@ -39,7 +46,7 @@ export default function PostTemplate({ data, pageContext, location }) {
           )}
           {previous && (
             <>
-              <h4>Previous</h4>
+              <h4 className="next-prev">Previous</h4>
               <Link to={previous.fields.slug} className="nav-link">
                 <h2 className="title">{previous.frontmatter.title}</h2>
               </Link>

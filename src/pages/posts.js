@@ -8,7 +8,7 @@ export default function PostsPage({ location }) {
 
   return (
     <Layout location={location}>
-      <article className="container page padding">
+      <article className="page padding container">
         <SEO title="Posts" />
         <h1 className="title text--xxxl">Posts</h1>
         <div className="content-grid">

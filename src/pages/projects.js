@@ -9,7 +9,7 @@ const ProjectsPage = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="Projects" />
-      <div className="page container padding">
+      <div className="page padding container">
         <h1 className="title text--xxxl">Projects</h1>
         <div className="content-grid">
           {edges.map(edge => (

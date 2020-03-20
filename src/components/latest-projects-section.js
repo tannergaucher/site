@@ -8,12 +8,10 @@ export default function LatestProjectsSection() {
 
   return (
     <section className="padding">
-      <div className="container center">
-        <hr />
-        <Link to="/projects" className="nav-link">
-          <h2>View All Projects &#8594;</h2>
-        </Link>
-      </div>
+      <hr />
+      <Link to="/projects" className="nav-link">
+        <h2>View All Projects &#8594;</h2>
+      </Link>
       <div className="content-grid">
         {edges.map(edge => (
           <ProjectCard project={edge.node} key={edge.node.id} />
