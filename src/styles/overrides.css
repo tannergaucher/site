@@ -4,7 +4,8 @@
   margin-right: var(--space-lg);
 }
 
-@media (max-width: 600px) {
+/* 850px === var--max-width */
+@media (max-width: 850px) {
   .container {
     margin-left: 0;
     margin-right: 0;
