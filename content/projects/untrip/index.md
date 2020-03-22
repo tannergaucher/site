@@ -1,6 +1,6 @@
 ---
 title: "Untrip.app"
-description: "Builds CMS content into a fast loading static site and hydrates into a full stack GraphQL app with users, dynamic lists, comments."
+description: "Builds CMS content into a static site and hydrates on the DOM into a full stack GraphQL web app."
 uses:
   [
     "Gatsby",
@@ -10,7 +10,8 @@ uses:
     "Apollo Server",
     "JWT authentication",
     "Prisma Client",
-    "Heroku server",
+    "Apollo Server",
+    "Heroku",
     "Netlify",
   ]
 deployedUrl: "https://untrip.app"
