@@ -1,12 +1,11 @@
 import { useStaticQuery, graphql } from "gatsby"
 
 export const useAllProjects = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+  const { allMdx } = useStaticQuery(
     graphql`
       query USE_ALL_PROJECTS {
-        allMarkdownRemark(
+        allMdx(
           filter: { fileAbsolutePath: { regex: "/projects/" } }
-          # CHANGE SORT BC PROJECTS ARENT GOING TO HAVE A FRONTMATTER.DATE
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           edges {
@@ -18,5 +17,5 @@ export const useAllProjects = () => {
       }
     `
   )
-  return allMarkdownRemark
+  return allMdx
 }

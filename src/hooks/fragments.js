@@ -1,25 +1,25 @@
 import { graphql } from "gatsby"
 
 export const POST_FRAGMENT = graphql`
-  fragment PostFragment on MarkdownRemark {
+  fragment PostFragment on Mdx {
     id
     excerpt
-    html
     timeToRead
+    body
+    fields {
+      slug
+    }
     frontmatter {
       title
       date(formatString: "MMMM DD, YYYY")
       description
       tags
     }
-    fields {
-      slug
-    }
   }
 `
 
 export const PROJECT_FRAGMENT = graphql`
-  fragment ProjectFragment on MarkdownRemark {
+  fragment ProjectFragment on Mdx {
     id
     frontmatter {
       title
@@ -28,9 +28,6 @@ export const PROJECT_FRAGMENT = graphql`
       deployedUrl
       vimeoUrl
       githubRepo
-    }
-    fields {
-      slug
     }
   }
 `

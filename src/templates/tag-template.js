@@ -1,5 +1,5 @@
 import { Layout } from "../components"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import React from "react"
 import { kebabCase } from "lodash"
 
@@ -9,7 +9,7 @@ export default function TagTemplate({ pageContext, location, data }) {
       <div className="padding">
         <h1 className="title">{pageContext.tag}</h1>
         <div className="content-grid">
-          {data.allMarkdownRemark.edges.map(edge => (
+          {data.allMdx.edges.map(edge => (
             <div key={edge.node.id} className="card">
               <Link className="nav-link" to={`/${edge.node.fields.slug}`}>
                 <h2 className="card-heading title">
@@ -38,7 +38,7 @@ export default function TagTemplate({ pageContext, location, data }) {
 
 export const pageQuery = graphql`
   query TagPageQuery($tag: [String]!) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         frontmatter: { tags: { in: $tag } }

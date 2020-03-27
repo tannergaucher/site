@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 export const useLatestPosts = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+  const { allMdx } = useStaticQuery(
     graphql`
       query USE_LATEST_POSTS {
-        allMarkdownRemark(
+        allMdx(
           filter: { fileAbsolutePath: { regex: "/posts/" } }
           sort: { fields: frontmatter___date, order: DESC }
           limit: 5
@@ -18,5 +18,5 @@ export const useLatestPosts = () => {
       }
     `
   )
-  return allMarkdownRemark
+  return allMdx
 }

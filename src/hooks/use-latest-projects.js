@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 export const useLatestProjects = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+  const { allMdx } = useStaticQuery(
     graphql`
       query USE_LATEST_PROJECTS {
-        allMarkdownRemark(
+        allMdx(
           filter: { fileAbsolutePath: { regex: "/projects/" } }
           limit: 6
         ) {
@@ -17,5 +17,5 @@ export const useLatestProjects = () => {
       }
     `
   )
-  return allMarkdownRemark
+  return allMdx
 }
