@@ -7,7 +7,6 @@ uses:
     "Sanity CMS",
     "Apollo Client",
     "React Hooks",
-    "Apollo Server",
     "JWT authentication",
     "Prisma Client",
     "Apollo Server",

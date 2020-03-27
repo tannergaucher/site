@@ -1,17 +1,19 @@
-import { Layout, SEO } from "../components"
-
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+
+import { Layout, SEO } from "../components"
 
 export default function PostTemplate({ data, pageContext, location }) {
   const { next, previous } = pageContext
-  const post = data.markdownRemark
+  const post = data.mdx
 
   return (
     <Layout location={location}>
       <SEO title="Posts" />
       <article
         className="page padding container"
+        // Update container class in style system and remove
         style={{
           maxWidth: `var(--container)`,
           marginLeft: `auto`,
@@ -29,10 +31,7 @@ export default function PostTemplate({ data, pageContext, location }) {
         </h1>
         <p>{post.frontmatter.description}</p>
         <hr />
-        <div
-          className="post-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <MDXRenderer>{post.body}</MDXRenderer>
         <hr />
         <br />
         <section>
@@ -62,7 +61,7 @@ export default function PostTemplate({ data, pageContext, location }) {
 
 export const pageQuery = graphql`
   query POST_MARKDOWN_QUERY($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       ...PostFragment
     }
   }

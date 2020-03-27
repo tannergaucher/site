@@ -5,7 +5,7 @@ const { kebabCase } = require(`lodash`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const slug = createFilePath({ node, getNode, basePath: `content` })
     createNodeField({
       node,
@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const allPostsQuery = await graphql(`
     query {
-      allMarkdownRemark(
+      allMdx(
         filter: { fileAbsolutePath: { regex: "/posts/" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  allPostsQuery.data.allMarkdownRemark.edges.forEach(edge => {
+  allPostsQuery.data.allMdx.edges.forEach(edge => {
     // Create post pages.
     createPage({
       path: edge.node.fields.slug,

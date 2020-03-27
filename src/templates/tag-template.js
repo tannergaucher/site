@@ -1,5 +1,5 @@
 import { Layout } from "../components"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import React from "react"
 import { kebabCase } from "lodash"
 
@@ -38,7 +38,7 @@ export default function TagTemplate({ pageContext, location, data }) {
 
 export const pageQuery = graphql`
   query TagPageQuery($tag: [String]!) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         frontmatter: { tags: { in: $tag } }
