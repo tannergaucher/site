@@ -32,6 +32,10 @@ a {
 }
 ```
 
+```jsx
+<div>Test</div>
+```
+
 [MDN prefers-color-scheme documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 
 [MDN CSS variables documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
