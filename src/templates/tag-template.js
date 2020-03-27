@@ -9,7 +9,7 @@ export default function TagTemplate({ pageContext, location, data }) {
       <div className="padding">
         <h1 className="title">{pageContext.tag}</h1>
         <div className="content-grid">
-          {data.allMarkdownRemark.edges.map(edge => (
+          {data.allMdx.edges.map(edge => (
             <div key={edge.node.id} className="card">
               <Link className="nav-link" to={`/${edge.node.fields.slug}`}>
                 <h2 className="card-heading title">
