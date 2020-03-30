@@ -6,7 +6,7 @@ import { kebabCase } from "lodash"
 export default function TagTemplate({ pageContext, location, data }) {
   return (
     <Layout location={location}>
-      <div className="padding">
+      <div className="padding page container">
         <h1 className="title">{pageContext.tag}</h1>
         <div className="content-grid">
           {data.allMdx.edges.map(edge => (
@@ -41,7 +41,7 @@ export const pageQuery = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
-        frontmatter: { tags: { in: $tag } }
+        frontmatter: { tags: { in: $tag }, draft: { eq: false } }
       }
     ) {
       edges {

@@ -4,6 +4,21 @@
   margin-right: var(--space-lg);
 }
 
+.page {
+  margin-bottom: var(--space-lg);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+blockquote {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 /* 850px === var--max-width */
 @media (max-width: 850px) {
   .container {

@@ -10,9 +10,8 @@ export default function PostCard({ post }) {
           <h2 className="card-heading title">{post.frontmatter.title}</h2>
         </Link>
         <p className="card-text">{post.frontmatter.description}</p>
-        <br />
       </div>
-      <nav className="nav">
+      <nav className="nav" style={{ marginTop: `var(--space-md)` }}>
         {post.frontmatter.tags.map((tag, i) => (
           <Link key={i} to={`/posts/${kebabCase(tag)}`} className="nav-link">
             <h4 className="card-heading">{tag}</h4>

@@ -14,6 +14,7 @@ export const POST_FRAGMENT = graphql`
       date(formatString: "MMMM DD, YYYY")
       description
       tags
+      draft
     }
   }
 `
