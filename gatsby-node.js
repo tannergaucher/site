@@ -21,7 +21,10 @@ exports.createPages = async ({ graphql, actions }) => {
   const allPostsQuery = await graphql(`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/posts/" }
+          frontmatter: { draft: { eq: false } }
+        }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -110,7 +113,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const allTagsQuery = await graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
+      allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/posts/" }
+          frontmatter: { draft: { eq: false } }
+        }
+      ) {
         group(field: frontmatter___tags) {
           fieldValue
         }
@@ -118,7 +126,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const uniqueTags = allTagsQuery.data.allMarkdownRemark.group
+  const uniqueTags = allTagsQuery.data.allMdx.group
 
   uniqueTags.forEach(uniqueTag => {
     createPage({
@@ -129,4 +137,33 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+}
+
+// Default frontmatter.draft to false, so posts that are not drafts don't need a draft field
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions
+
+  createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, _args, _context, info) {
+          if (source[info.fieldName] == null) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      draft: Boolean @defaultFalse
+    }
+  `)
 }
