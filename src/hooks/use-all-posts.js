@@ -5,7 +5,10 @@ export const useAllPosts = () => {
     graphql`
       query USE_ALL_POSTS {
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/posts/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/posts/" }
+            frontmatter: { draft: { eq: false } }
+          }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           edges {
