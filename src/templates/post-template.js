@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 
 import { Layout, SEO } from "../components"
 
@@ -12,50 +13,63 @@ export default function PostTemplate({ data, pageContext, location }) {
     <Layout location={location}>
       <SEO title="Posts" />
       <div className="padding">
-        <article
-          className="page container card post-padding post"
-          // Update container class in style system and remove
-          style={{
-            maxWidth: `var(--container)`,
-            margin: `var(--space-lg) auto`,
-          }}
-        >
-          {/* <time style={{ marginTop: `var(--space-sm)` }}>
-          </time> */}
-          <h1
-            className="title text--xxxl"
-            style={{
-              marginTop: `var(--space-md)`,
-              marginBottom: `var(--space-md)`,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p>{post.frontmatter.description}</p>
-          <hr />
-          <MDXRenderer>{post.body}</MDXRenderer>
+        <article className="page card container post">
+          <Img
+            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+            className="card-image"
+          />
+          <div className="padding container">
+            <h1
+              className="title card-title text--xxxl"
+              style={{
+                marginTop: `var(--space-lg)`,
+                marginBottom: `var(--space-lg)`,
+              }}
+            >
+              {post.frontmatter.title}
+            </h1>
+            <h2
+              style={{
+                color: `var(--grey)`,
+                textTransform: `capitalize`,
+                fontWeight: 400,
+              }}
+            >
+              {post.frontmatter.description}
+            </h2>
+            <hr />
+            <div className="post-body">
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </div>
+          </div>
         </article>
         <section
+          className="container"
           style={{
-            maxWidth: `var(--container)`,
-            margin: `var(--space-xl) auto`,
+            marginTop: `var(--space-lg)`,
+            marginBottom: `var(--space-lg)`,
           }}
         >
           {next && (
-            <>
-              <h4 className="next-prev">Next</h4>
-              <Link to={next.fields.slug} className="nav-link">
-                <h2 className="title next">{next.frontmatter.title}</h2>
-              </Link>
-            </>
+            <Link to={next.fields.slug} className="nav-link">
+              <div className="card container">
+                <h4 className="card-text">Next</h4>
+                <h2 className="title card-heading">{next.frontmatter.title}</h2>
+              </div>
+            </Link>
           )}
+          <div
+            style={{ margin: `${next && previous && `var(--space-md) 0`}` }}
+          />
           {previous && (
-            <>
-              <h4 className="next-prev">Previous</h4>
-              <Link to={previous.fields.slug} className="nav-link">
-                <h2 className="title prev">{previous.frontmatter.title}</h2>
-              </Link>
-            </>
+            <Link to={previous.fields.slug} className="nav-link">
+              <div className="card container">
+                <h4 className="card-text">Previous</h4>
+                <h2 className="title card-heading">
+                  {previous.frontmatter.title}
+                </h2>
+              </div>
+            </Link>
           )}
           <br />
         </section>

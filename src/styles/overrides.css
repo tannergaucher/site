@@ -4,14 +4,22 @@
   margin-right: var(--space-lg);
 }
 
+.content-grid {
+  align-items: flex-start;
+}
+
+.card-text {
+  font-weight: 300;
+}
+
 .page {
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-  box-shadow: none;
-  border-radius: 0;
+  background-color: var(--code-bg);
 }
 
 blockquote {
@@ -19,7 +27,20 @@ blockquote {
   box-shadow: none;
 }
 
-/* 850px === var--max-width */
+li {
+  color: var(--text-color);
+}
+
+p,
+li {
+  font-weight: 300;
+}
+
+.btn {
+  font-weight: 900;
+  letter-spacing: var(--caps-letter-spacing);
+}
+
 @media (max-width: 850px) {
   .container {
     margin-left: 0;

@@ -8,4 +8,5 @@ uses:
 deployedUrl: "https://reach-ui-semantic-styles.netlify.com/"
 vimeoUrl: ""
 githubRepo: "https://github.com/tannergaucher/reach-ui-semantic-styles"
+featuredImage: "./featured.jpg"
 ---

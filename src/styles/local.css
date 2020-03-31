@@ -7,11 +7,6 @@
   margin: var(--space-sm) 0;
 }
 
-hr {
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
-}
-
 blockquote {
   background-color: var(--bg-2);
 }
@@ -20,17 +15,17 @@ blockquote p {
   font-weight: 300;
 }
 
-.post > p,
-.post > ul {
+.card-image {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.post {
+  box-shadow: var(--elevation-3);
+}
+
+.post-body > ul li,
+.post-body > p {
   color: var(--grey);
-}
-
-.post-padding {
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
-}
-
-.post-padding > *:not(.prism-code):not(blockquote) {
-  margin-left: var(--space-md);
-  margin-right: var(--space-md);
+  font-weight: 400;
 }

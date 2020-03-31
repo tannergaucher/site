@@ -1,16 +1,19 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default function ContactSection() {
   return (
     <section className="padding">
       <hr />
-      <h2
-        className="text--xxl"
-        id="contact"
-        style={{ margin: `var(--space-xl) 0` }}
-      >
-        Contact
-      </h2>
+      <Link className="nav-link" to="#contact">
+        <h2
+          className="text--xxl"
+          id="contact"
+          style={{ margin: `var(--space-xl) 0` }}
+        >
+          Contact
+        </h2>
+      </Link>
       <fieldset className="fieldset">
         <form
           className="form"

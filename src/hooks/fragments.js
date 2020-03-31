@@ -15,6 +15,13 @@ export const POST_FRAGMENT = graphql`
       description
       tags
       draft
+      featuredImage {
+        childImageSharp {
+          fluid(maxWidth: 1200, maxHeight: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   }
 `
@@ -29,6 +36,13 @@ export const PROJECT_FRAGMENT = graphql`
       deployedUrl
       vimeoUrl
       githubRepo
+      featuredImage {
+        childImageSharp {
+          fluid(maxWidth: 1200, maxHeight: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   }
 `
