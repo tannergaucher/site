@@ -20,7 +20,12 @@ const Layout = ({ location, children }) => {
         <div style={{ display: `flex`, flexDirection: `column` }}>
           <Link to="/" className="nav-link">
             {isIndexPage ? (
-              <h1 className="title" style={{ marginBottom: `var(--space-md)` }}>
+              <h1
+                className="title"
+                style={{
+                  marginBottom: `var(--space-md)`,
+                }}
+              >
                 {title}
               </h1>
             ) : (

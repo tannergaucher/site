@@ -1,7 +1,7 @@
 .container {
   max-width: none;
-  margin-left: var(--space-lg);
-  margin-right: var(--space-lg);
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
 }
 
 .content-grid {
@@ -9,7 +9,6 @@
 }
 
 .card-text {
-  font-weight: 300;
 }
 
 .page {
@@ -27,17 +26,13 @@ blockquote {
   box-shadow: none;
 }
 
-li {
-  color: var(--text-color);
-}
-
 p,
 li {
-  font-weight: 300;
+  color: var(--grey);
 }
 
 .btn {
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: var(--caps-letter-spacing);
 }
 

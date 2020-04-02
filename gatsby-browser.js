@@ -3,8 +3,6 @@ import { MDXProvider } from "@mdx-js/react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 
-// require("prism-theme-night-owl")
-
 const scope = {}
 
 const components = {

@@ -23,9 +23,3 @@ blockquote p {
 .post {
   box-shadow: var(--elevation-3);
 }
-
-.post-body > ul li,
-.post-body > p {
-  color: var(--grey);
-  font-weight: 400;
-}

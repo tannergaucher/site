@@ -16,7 +16,7 @@ export default function PostCard({ post }) {
       </Link>
       <nav className="card-heading">
         {post.frontmatter.tags.map(tag => (
-          <Link className="nav-link" to={`/posts/${kebabCase(tag)}`}>
+          <Link className="nav-link text--md" to={`/posts/${kebabCase(tag)}`}>
             {tag}
           </Link>
         ))}

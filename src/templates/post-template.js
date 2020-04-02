@@ -31,8 +31,6 @@ export default function PostTemplate({ data, pageContext, location }) {
             <h2
               style={{
                 color: `var(--grey)`,
-                textTransform: `capitalize`,
-                fontWeight: 400,
               }}
             >
               {post.frontmatter.description}
@@ -52,9 +50,9 @@ export default function PostTemplate({ data, pageContext, location }) {
         >
           {next && (
             <Link to={next.fields.slug} className="nav-link">
-              <div className="card container">
-                <h4 className="card-text">Next</h4>
-                <h2 className="title card-heading">{next.frontmatter.title}</h2>
+              <div className="container">
+                <h4>Next</h4>
+                <h2 className="title">{next.frontmatter.title}</h2>
               </div>
             </Link>
           )}
@@ -63,11 +61,9 @@ export default function PostTemplate({ data, pageContext, location }) {
           />
           {previous && (
             <Link to={previous.fields.slug} className="nav-link">
-              <div className="card container">
-                <h4 className="card-text">Previous</h4>
-                <h2 className="title card-heading">
-                  {previous.frontmatter.title}
-                </h2>
+              <div className="container">
+                <h4>Previous</h4>
+                <h2 className="title">{previous.frontmatter.title}</h2>
               </div>
             </Link>
           )}

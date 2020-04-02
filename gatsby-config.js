@@ -38,31 +38,40 @@ module.exports = {
         dataset: `production`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              sizeByPixelDensity: true,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 1200,
+    //           sizeByPixelDensity: true,
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-prismjs`,
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
