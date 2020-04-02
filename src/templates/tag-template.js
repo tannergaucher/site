@@ -1,6 +1,5 @@
 import React from "react"
-import { kebabCase } from "lodash"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import { Layout, PostCard } from "../components"
 
