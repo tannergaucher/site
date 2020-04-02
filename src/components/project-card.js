@@ -10,35 +10,39 @@ export default function ProjectCard({ project }) {
         rel="noopener noreferrer"
       >
         <h2 className="card-heading title">{project.frontmatter.title}</h2>
+        <p className="card-text">{project.frontmatter.description}</p>
       </a>
-      <p className="card-text">{project.frontmatter.description}</p>
-      <div className="card-text">
+
+      <div className="padding">
         <ul>
           {project.frontmatter.uses.map(tech => (
-            <li key={tech}>{tech}</li>
+            <li key={tech} style={{ color: `var(--grey)` }}>
+              {tech}
+            </li>
           ))}
         </ul>
       </div>
-      <nav className="nav card-text">
+      <div className="card-heading">
         <a
-          className="nav-link"
+          className="nav-link text--md"
           href={project.frontmatter.githubRepo}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 style={{ margin: 0 }}>Github</h4>
+          Github
         </a>
+
         {project.frontmatter.vimeoUrl && (
           <a
-            className="nav-link"
+            className="nav-link text--md"
             href={project.frontmatter.vimeoUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4 style={{ margin: 0 }}>Video </h4>
+            Video
           </a>
         )}
-      </nav>
+      </div>
     </div>
   )
 }

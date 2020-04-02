@@ -3,8 +3,6 @@ import { MDXProvider } from "@mdx-js/react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 
-require("prism-theme-night-owl")
-
 const scope = {}
 
 const components = {
@@ -43,27 +41,25 @@ const components = {
         </LiveProvider>
       </div>
     ) : (
-      console.log(props) || (
-        <>
-          <Highlight
-            {...defaultProps}
-            code={props.children.props.children}
-            language={props.children.props.className.replace(/language-/, "")}
-          >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre className={className} style={style}>
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
-        </>
-      )
+      <>
+        <Highlight
+          {...defaultProps}
+          code={props.children.props.children}
+          language={props.children.props.className.replace(/language-/, "")}
+        >
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre className={className} style={style}>
+              {tokens.map((line, i) => (
+                <div {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
+      </>
     ),
 }
 

@@ -16,4 +16,5 @@ uses:
 deployedUrl: "https://untrip.app"
 vimeoUrl: "https://player.vimeo.com/video/396019216"
 githubRepo: "http://www.github.com/tannergaucher/untrip-app"
+featuredImage: "./featured.jpg"
 ---

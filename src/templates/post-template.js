@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 
 import { Layout, SEO } from "../components"
 
@@ -11,50 +12,64 @@ export default function PostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO title="Posts" />
-      <article
-        className="page padding container"
-        // Update container class in style system and remove
-        style={{
-          maxWidth: `var(--container)`,
-          marginLeft: `auto`,
-          marginRight: `auto`,
-        }}
-      >
-        <time>
-          <small>{post.frontmatter.date}</small>
-        </time>
-        <h1
-          className="title text--xxxl"
-          style={{ margin: `var(--space-lg) 0` }}
+      <div className="padding">
+        <article className="page card container post">
+          <Img
+            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+            className="card-image"
+          />
+          <div className="padding container">
+            <h1
+              className="title card-title text--xxxl"
+              style={{
+                marginTop: `var(--space-lg)`,
+                marginBottom: `var(--space-lg)`,
+              }}
+            >
+              {post.frontmatter.title}
+            </h1>
+            <h2
+              style={{
+                color: `var(--grey)`,
+              }}
+            >
+              {post.frontmatter.description}
+            </h2>
+            <hr />
+            <div className="post-body">
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </div>
+          </div>
+        </article>
+        <section
+          className="container"
+          style={{
+            marginTop: `var(--space-lg)`,
+            marginBottom: `var(--space-lg)`,
+          }}
         >
-          {post.frontmatter.title}
-        </h1>
-        <p>{post.frontmatter.description}</p>
-        <hr />
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr />
-        <br />
-        <section>
           {next && (
-            <>
-              <h4 className="next-prev">Next</h4>
-              <Link to={next.fields.slug} className="nav-link">
+            <Link to={next.fields.slug} className="nav-link">
+              <div className="container">
+                <h4>Next</h4>
                 <h2 className="title">{next.frontmatter.title}</h2>
-              </Link>
-            </>
+              </div>
+            </Link>
           )}
+          <div
+            style={{ margin: `${next && previous && `var(--space-md) 0`}` }}
+          />
           {previous && (
-            <>
-              <h4 className="next-prev">Previous</h4>
-              <Link to={previous.fields.slug} className="nav-link">
+            <Link to={previous.fields.slug} className="nav-link">
+              <div className="container">
+                <h4>Previous</h4>
                 <h2 className="title">{previous.frontmatter.title}</h2>
-              </Link>
-            </>
+              </div>
+            </Link>
           )}
           <br />
         </section>
-        <br />
-      </article>
+      </div>
     </Layout>
   )
 }

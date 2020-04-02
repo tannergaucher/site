@@ -1,10 +1,10 @@
 import { Layout, PostCard, SEO } from "../components"
 
 import React from "react"
-import { useLatestPosts } from "../hooks"
+import { useAllPosts } from "../hooks"
 
 export default function PostsPage({ location }) {
-  const { edges } = useLatestPosts()
+  const { edges } = useAllPosts()
 
   return (
     <Layout location={location}>

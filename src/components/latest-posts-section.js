@@ -9,8 +9,10 @@ export default function LatestPostsSection() {
   return (
     <section className="padding">
       <hr />
-      <Link to="/posts" className="nav-link">
-        <h2>View All Posts &#8594;</h2>
+      <Link to="/posts" className="nav-link arrow-link">
+        <h2>
+          View All Posts <span className="arrow">&#8594;</span>
+        </h2>
       </Link>
       <div className="content-grid">
         {edges.map(edge => (

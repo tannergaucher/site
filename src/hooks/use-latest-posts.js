@@ -10,7 +10,7 @@ export const useLatestPosts = () => {
             frontmatter: { draft: { eq: false } }
           }
           sort: { fields: frontmatter___date, order: DESC }
-          limit: 5
+          limit: 6
         ) {
           edges {
             node {

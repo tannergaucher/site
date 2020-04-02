@@ -1,21 +1,23 @@
 import { Link } from "gatsby"
 import React from "react"
+import Img from "gatsby-image"
 import { kebabCase } from "lodash"
 
 export default function PostCard({ post }) {
   return (
     <div key={post.id} className="card">
-      <div>
-        <Link className="nav-link" to={post.fields.slug}>
-          <h2 className="card-heading title">{post.frontmatter.title}</h2>
-        </Link>
+      <Img
+        fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+        className="card-image"
+      />
+      <Link className="nav-link" to={post.fields.slug}>
+        <h2 className="card-heading title">{post.frontmatter.title}</h2>
         <p className="card-text">{post.frontmatter.description}</p>
-        <br />
-      </div>
-      <nav className="nav">
-        {post.frontmatter.tags.map((tag, i) => (
-          <Link key={i} to={`/posts/${kebabCase(tag)}`} className="nav-link">
-            <h4 className="card-heading">{tag}</h4>
+      </Link>
+      <nav className="card-heading">
+        {post.frontmatter.tags.map(tag => (
+          <Link className="nav-link text--md" to={`/posts/${kebabCase(tag)}`}>
+            {tag}
           </Link>
         ))}
       </nav>

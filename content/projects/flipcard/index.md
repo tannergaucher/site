@@ -14,4 +14,5 @@ uses:
 deployedUrl: "https://flipcard.fun"
 vimeoUrl: "https://player.vimeo.com/video/396019753"
 githubRepo: "https://github.com/tannergaucher/flip-card"
+featuredImage: "./featured.jpg"
 ---

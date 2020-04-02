@@ -11,7 +11,8 @@ import { useSiteMetadata } from "../hooks"
 
 const Layout = ({ location, children }) => {
   const { title, description, social } = useSiteMetadata()
-  const isIndexPage = location.pathname === "/"
+
+  const isIndexPage = location.pathname === `/`
 
   return (
     <>
@@ -19,7 +20,12 @@ const Layout = ({ location, children }) => {
         <div style={{ display: `flex`, flexDirection: `column` }}>
           <Link to="/" className="nav-link">
             {isIndexPage ? (
-              <h1 className="title" style={{ marginBottom: `var(--space-sm)` }}>
+              <h1
+                className="title"
+                style={{
+                  marginBottom: `var(--space-md)`,
+                }}
+              >
                 {title}
               </h1>
             ) : (
@@ -28,13 +34,18 @@ const Layout = ({ location, children }) => {
           </Link>
           {isIndexPage && (
             <>
-              <p style={{ marginBottom: `var(--space-sm)` }}>{description}</p>
-              <nav className="nav">
+              <h2>{description}</h2>
+              <nav className="nav" style={{ marginTop: `var(--space-md)` }}>
                 <a href="#contact" className="nav-link">
-                  <h3>Contact</h3>
+                  <button className="btn">Contact</button>
                 </a>
-                <a href={social.github} className="nav-link">
-                  <h3>Github</h3>
+                <a
+                  href={social.github}
+                  className="nav-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn">Github</button>
                 </a>
               </nav>
             </>
@@ -42,7 +53,7 @@ const Layout = ({ location, children }) => {
         </div>
       </header>
       <main className="main">{children}</main>
-      <footer className="footer padding container">
+      <footer className="footer container padding">
         <Link to="/" className="nav-link">
           <h4 className="site-title title">{title}</h4>
         </Link>
