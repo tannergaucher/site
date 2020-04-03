@@ -30,7 +30,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   background-color: var(--code-bg);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 blockquote {
