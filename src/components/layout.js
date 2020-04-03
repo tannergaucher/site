@@ -28,9 +28,9 @@ const Layout = ({ location, children }) => {
           {isIndexPage && (
             <>
               <h2 style={{ marginTop: 0 }}>{description}</h2>
-              <nav className="nav" style={{ marginTop: `var(--space-md)` }}>
+              <nav className="nav">
                 <a href="#contact" className="nav-link">
-                  <button className="btn">Contact</button>
+                  <h3>Contact</h3>
                 </a>
                 <a
                   href={social.github}
@@ -38,7 +38,7 @@ const Layout = ({ location, children }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="btn">Github</button>
+                  <h3>Github</h3>
                 </a>
               </nav>
             </>
