@@ -6,11 +6,7 @@ export default function ContactSection() {
     <section className="padding">
       <hr />
       <Link className="nav-link" to="#contact">
-        <h2
-          className="text--xxl"
-          id="contact"
-          style={{ margin: `var(--space-xl) 0` }}
-        >
+        <h2 id="contact" style={{ marginBottom: `var(--space-lg)` }}>
           Contact
         </h2>
       </Link>
