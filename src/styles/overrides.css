@@ -1,14 +1,5 @@
-.container {
-  max-width: none;
-  margin-left: var(--space-xl);
-  margin-right: var(--space-xl);
-}
-
 .content-grid {
   align-items: flex-start;
-}
-
-.card-text {
 }
 
 .page {
@@ -19,6 +10,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   background-color: var(--code-bg);
+  overflow-y: scroll;
 }
 
 blockquote {
@@ -32,13 +24,6 @@ li {
 }
 
 .btn {
-  font-weight: 700;
   letter-spacing: var(--caps-letter-spacing);
-}
-
-@media (max-width: 850px) {
-  .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
+  font: 700 var(--text-md) var(--sans);
 }

@@ -12,7 +12,6 @@ export default function ProjectCard({ project }) {
         <h2 className="card-heading title">{project.frontmatter.title}</h2>
         <p className="card-text">{project.frontmatter.description}</p>
       </a>
-
       <div className="padding">
         <ul>
           {project.frontmatter.uses.map(tech => (
@@ -31,7 +30,6 @@ export default function ProjectCard({ project }) {
         >
           Github
         </a>
-
         {project.frontmatter.vimeoUrl && (
           <a
             className="nav-link text--md"
