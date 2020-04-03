@@ -1,5 +1,25 @@
+:root {
+  --caps-letter-spacing: 0.11rem;
+}
+
 .content-grid {
   align-items: flex-start;
+}
+
+.card {
+  justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .page {
