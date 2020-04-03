@@ -29,8 +29,8 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  background-color: var(--code-bg);
   overflow-y: auto;
+  font-size: var(--text-sm);
 }
 
 blockquote {
