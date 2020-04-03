@@ -9,6 +9,7 @@ export default function PostCard({ post }) {
       <div>
         <Img
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          className="card-image"
         />
         <Link className="nav-link" to={post.fields.slug}>
           <h2 className="card-heading title">{post.frontmatter.title}</h2>
