@@ -20,7 +20,7 @@ export default function PostTemplate({ data, pageContext, location }) {
           />
           <div className="padding container">
             <h1
-              className="title card-title text--xxxl"
+              className="title card-title"
               style={{
                 marginTop: `var(--space-lg)`,
                 marginBottom: `var(--space-lg)`,
@@ -44,25 +44,25 @@ export default function PostTemplate({ data, pageContext, location }) {
         <section
           className="container"
           style={{
-            marginTop: `var(--space-lg)`,
-            marginBottom: `var(--space-lg)`,
+            marginTop: `var(--space-xl)`,
+            marginBottom: `var(--space-xl)`,
           }}
         >
           {next && (
             <Link to={next.fields.slug} className="nav-link">
               <div className="container">
-                <h4>Next</h4>
+                <small style={{ color: `var(--grey)` }}>Next</small>
                 <h2 className="title">{next.frontmatter.title}</h2>
               </div>
             </Link>
           )}
           <div
-            style={{ margin: `${next && previous && `var(--space-md) 0`}` }}
+            style={{ margin: `${next && previous && `var(--space-lg) 0`}` }}
           />
           {previous && (
             <Link to={previous.fields.slug} className="nav-link">
               <div className="container">
-                <h4>Previous</h4>
+                <small style={{ color: `var(--grey)` }}>Previous</small>
                 <h2 className="title">{previous.frontmatter.title}</h2>
               </div>
             </Link>
