@@ -10,7 +10,7 @@ const ProjectsPage = ({ location }) => {
     <Layout location={location}>
       <SEO title="Projects" />
       <div className="page padding container">
-        <h1 className="title text--xxxl">Projects</h1>
+        <h1 className="title text--xxxl page-title">Projects</h1>
         <div className="content-grid">
           {edges.map(edge => (
             <ProjectCard project={edge.node} key={edge.node.id} />
