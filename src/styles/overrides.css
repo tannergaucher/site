@@ -1,5 +1,8 @@
 :root {
-  --caps-letter-spacing: 0.11rem;
+  --caps-letter-spacing: 0.13rem;
+  --text-baseline: calc(0.6rem + var(--responsive-unit));
+  --space-baseline: calc(1.3rem + var(--responsive-unit));
+  --transition: 0.3s;
 }
 
 .content-grid {
@@ -46,4 +49,9 @@ li {
 .btn {
   letter-spacing: var(--caps-letter-spacing);
   font: 700 var(--text-md) var(--sans);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent-2);
 }

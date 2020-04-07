@@ -23,3 +23,13 @@ blockquote p {
 .post {
   box-shadow: var(--elevation-3);
 }
+
+.arrow-link:hover .arrow {
+  margin-left: var(--space-md);
+  transition: var(--transition);
+  color: var(--bg-1);
+}
+
+.page-title {
+  margin-top: var(--space-lg);
+}

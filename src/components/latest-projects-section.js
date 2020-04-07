@@ -9,8 +9,10 @@ export default function LatestProjectsSection() {
   return (
     <section className="padding">
       <hr />
-      <Link to="/projects" className="nav-link">
-        <h2>View All Projects &#8594;</h2>
+      <Link to="/projects" className="nav-link arrow-link">
+        <h2>
+          View All Projects <span className="arrow">&#8594;</span>
+        </h2>
       </Link>
       <div className="content-grid">
         {edges.map(edge => (
