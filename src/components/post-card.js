@@ -12,7 +12,7 @@ export default function PostCard({ post }) {
           className="card-image"
         />
         <Link className="nav-link" to={post.fields.slug}>
-          <h2 className="card-heading title">{post.frontmatter.title}</h2>
+          <h2 className="card-heading">{post.frontmatter.title}</h2>
           <p className="card-text">{post.frontmatter.description}</p>
         </Link>
       </div>

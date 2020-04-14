@@ -20,7 +20,7 @@ export default function PostTemplate({ data, pageContext, location }) {
           />
           <div className="padding container">
             <h1
-              className="title card-title"
+              className="text--xxxl"
               style={{
                 marginTop: `var(--space-lg)`,
                 marginBottom: `var(--space-lg)`,
@@ -50,9 +50,11 @@ export default function PostTemplate({ data, pageContext, location }) {
         >
           {next && (
             <Link to={next.fields.slug} className="nav-link">
-              <div className="container">
-                <small style={{ color: `var(--grey)` }}>Next</small>
-                <h2 className="title">{next.frontmatter.title}</h2>
+              <div className="card padding">
+                <div className="container">
+                  <h4 style={{ color: `var(--grey)` }}>Next:</h4>
+                  <h2>{next.frontmatter.title}</h2>
+                </div>
               </div>
             </Link>
           )}
@@ -61,9 +63,11 @@ export default function PostTemplate({ data, pageContext, location }) {
           />
           {previous && (
             <Link to={previous.fields.slug} className="nav-link">
-              <div className="container">
-                <small style={{ color: `var(--grey)` }}>Previous</small>
-                <h2 className="title">{previous.frontmatter.title}</h2>
+              <div className="card padding">
+                <div className="container">
+                  <h4 style={{ color: `var(--grey)` }}>Previous:</h4>
+                  <h2>{previous.frontmatter.title}</h2>
+                </div>
               </div>
             </Link>
           )}

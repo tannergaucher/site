@@ -7,7 +7,7 @@ export default function TagTemplate({ pageContext, location, data }) {
   return (
     <Layout location={location}>
       <div className="padding page container">
-        <h1 className="title">{pageContext.tag}</h1>
+        <h1>{pageContext.tag}</h1>
         <div className="content-grid">
           {data.allMdx.edges.map(edge => (
             <PostCard key={edge.node.id} post={edge.node} />

@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2 className="card-heading title">{project.frontmatter.title}</h2>
+        <h2 className="card-heading">{project.frontmatter.title}</h2>
         <p className="card-text">{project.frontmatter.description}</p>
       </a>
       <div className="padding">
