@@ -1,3 +1,5 @@
+import React from "react"
+
 import {
   ContactSection,
   LatestPhotosSection,
@@ -6,8 +8,6 @@ import {
   Layout,
   SEO,
 } from "../components"
-
-import React from "react"
 
 export default function IndexPage({ location }) {
   return (

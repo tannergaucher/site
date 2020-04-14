@@ -3,8 +3,6 @@ import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { useAvatarImage } from "../hooks"
-
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -19,8 +17,6 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
-
-  const { fixed } = useAvatarImage()
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -49,10 +45,6 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          property: `og:image`,
-          content: fixed.src,
-        },
-        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -67,10 +59,6 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: fixed.src,
         },
       ].concat(meta)}
     />
