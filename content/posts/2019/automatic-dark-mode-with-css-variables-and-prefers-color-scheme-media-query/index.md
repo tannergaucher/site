@@ -1,5 +1,5 @@
 ---
-title: "Responsive Themes with CSS Variables and one Media Query"
+title: "Responsive Themes with CSS Variables and One Media Query"
 date: "2019-11-13"
 description: "A no JavaScript approach to detecting a user's OS light / dark mode and presenting a themed UI."
 tags: ["CSS", "Web"]
