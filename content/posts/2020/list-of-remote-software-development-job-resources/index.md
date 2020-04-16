@@ -9,3 +9,4 @@ featuredImage: "./featured.jpg"
 - [Remotive.io](https://remotive.io/)
 - [JS Remotely](https://jsremotely.com/)
 - [Remoteok.io](https://remoteok.io/remote-dev-jobs)
+- [weworkremotely.com](https://weworkremotely.com)
