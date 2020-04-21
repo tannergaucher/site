@@ -6,6 +6,7 @@ import Layout from "./layout"
 import PostCard from "./post-card"
 import ProjectCard from "./project-card"
 import SEO from "./seo"
+import IntroCard from "./intro-card"
 
 export {
   Layout,
@@ -16,4 +17,5 @@ export {
   LatestProjectsSection,
   PostCard,
   ProjectCard,
+  IntroCard,
 }

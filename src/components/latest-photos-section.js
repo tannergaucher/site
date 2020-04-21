@@ -9,9 +9,9 @@ export default function LatestPhotosSection() {
   return (
     <section className="padding">
       <hr />
-      <Link to="/photos" className="nav-link arrow-link">
+      <Link to="/photos" className="nav-link animated-link">
         <h2>
-          View All Photos <span className="arrow">&#8594;</span>
+          View All Photos <span className="animated">&#8594;</span>
         </h2>
       </Link>
       <div className="image-grid">

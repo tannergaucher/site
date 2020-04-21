@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:500,700,900&display=swap");
+
 :root {
+  --sans: "Inter", sans-serif;
   --caps-letter-spacing: 0.13rem;
   --text-baseline: calc(0.6rem + var(--responsive-unit));
   --space-baseline: calc(1.3rem + var(--responsive-unit));

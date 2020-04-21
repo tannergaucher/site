@@ -9,9 +9,9 @@ export default function LatestProjectsSection() {
   return (
     <section className="padding">
       <hr />
-      <Link to="/projects" className="nav-link arrow-link">
+      <Link to="/projects" className="nav-link animated-link">
         <h2>
-          View All Projects <span className="arrow">&#8594;</span>
+          View All Projects <span className="animated">&#8594;</span>
         </h2>
       </Link>
       <div className="content-grid">
