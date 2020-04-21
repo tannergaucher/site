@@ -48,7 +48,6 @@ li {
 
 .btn {
   letter-spacing: var(--caps-letter-spacing);
-  font: 700 var(--text-md) var(--sans);
 }
 
 .input:focus,
