@@ -24,7 +24,7 @@ blockquote p {
   box-shadow: var(--elevation-3);
 }
 
-.arrow-link:hover .arrow {
+.animated-link:hover .animated {
   margin-left: var(--space-md);
   transition: var(--transition);
   color: var(--bg-1);

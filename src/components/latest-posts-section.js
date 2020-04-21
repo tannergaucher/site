@@ -9,9 +9,9 @@ export default function LatestPostsSection() {
   return (
     <section className="padding">
       <hr />
-      <Link to="/posts" className="nav-link arrow-link">
+      <Link to="/posts" className="nav-link animated-link">
         <h2>
-          View All Posts <span className="arrow">&#8594;</span>
+          View All Posts <span className="animated">&#8594;</span>
         </h2>
       </Link>
       <div className="content-grid">
