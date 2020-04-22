@@ -5,7 +5,7 @@ import React from "react"
 const NotFoundPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="404: Not found" />
-    <div className="page padding">
+    <div className="container page padding">
       <h1>NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </div>
