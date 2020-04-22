@@ -6,8 +6,8 @@ export const useAvatarImage = () => {
       query AvatarImage {
         file(relativePath: { regex: "/avatar/" }) {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
