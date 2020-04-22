@@ -1,5 +1,4 @@
 import React from "react"
-
 import Img from "gatsby-image"
 
 import { useAvatarImage } from "../hooks"
@@ -8,7 +7,8 @@ export default function IntroCard({ company }) {
   const { fluid } = useAvatarImage()
 
   //   navigator.share not available on chrome
-  const isShare = window.navigator.share !== undefined
+  const isShare =
+    typeof window !== `undefined` && window.navigator.share !== undefined
 
   return (
     <div>
@@ -33,21 +33,15 @@ export default function IntroCard({ company }) {
         <div className="padding"></div>
         <Img fluid={fluid} />
         <h2 className="card-title padding" style={{ marginBottom: 0 }}>
-          Hi, I'm{" "}
-          <a
-            href="https://tannergaucher.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tanner
-          </a>
+          Hi, I'm Tanner.
           <span
             role="img"
             aria-label="hand wave"
-            style={{ marginLeft: `var(--space-sm)` }}
+            style={{ margin: `0 var(--space-sm)` }}
           >
             👋
           </span>
+          Nice to digitally meet you!
         </h2>
         <p className="card-text">
           I made a quick list of reasons why I'm a good match for {company}.
