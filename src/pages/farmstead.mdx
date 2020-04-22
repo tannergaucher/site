@@ -1,8 +1,9 @@
-import { Layout, IntroCard } from "../components"
+import { Layout, IntroCard, SEO } from "../components"
 
 export default ({ location, children }) => {
   return (
     <Layout location={location}>
+      <SEO title="Hire Me" />
       <div className="container padding">{children}</div>
     </Layout>
   )
