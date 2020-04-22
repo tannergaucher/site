@@ -18,7 +18,7 @@ export const POST_FRAGMENT = graphql`
       featuredImage {
         childImageSharp {
           fluid(maxWidth: 1200, maxHeight: 600) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -39,7 +39,7 @@ export const PROJECT_FRAGMENT = graphql`
       featuredImage {
         childImageSharp {
           fluid(maxWidth: 1200, maxHeight: 600) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -57,7 +57,7 @@ export const MY_IMAGE_FRAGMENT = graphql`
     myImage {
       asset {
         _rawMetadata
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 2000) {
           ...GatsbySanityImageFluid_withWebp
         }
         metadata {
