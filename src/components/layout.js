@@ -9,6 +9,8 @@ import "../styles/local.css"
 
 import { useSiteMetadata } from "../hooks"
 
+import resume from "../images/resume.pdf"
+
 const Layout = ({ location, children }) => {
   const { title, description, social } = useSiteMetadata()
 
@@ -31,6 +33,15 @@ const Layout = ({ location, children }) => {
               <nav className="nav">
                 <a href="#contact" className="nav-link">
                   <h3>Contact</h3>
+                </a>
+                <a
+                  className="nav-link"
+                  href={resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Tanner_Gaucher_Resume"
+                >
+                  <h3>Resume</h3>
                 </a>
                 <a
                   href={social.github}
