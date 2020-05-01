@@ -1,12 +1,9 @@
 ---
-title: "Reach UI X Semantic Styles"
-description: "Reach UI components styled with semantic styles."
-uses:
-  [
-    "Accessible react UI components meet responsive, themed, styles from my own design system.",
-  ]
-deployedUrl: "https://reach-ui-semantic-styles.netlify.com/"
+title: "Semantic Styles X Reach UI"
+description: "Accessible Reach UI components meet responsive, themed, styles from my design system."
+uses: []
+deployedUrl: "https://semantic-styles-reach-ui.netlify.app"
 vimeoUrl: ""
-githubRepo: "https://github.com/tannergaucher/reach-ui-semantic-styles"
+githubRepo: "https://github.com/tannergaucher/semantic-styles-reach-ui"
 featuredImage: "./featured.jpg"
 ---
