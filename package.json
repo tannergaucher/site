@@ -1,58 +1,38 @@
 {
-  "name": "tannergaucher.com",
-  "private": true,
-  "description": "Blog, portfolio, photo journal.",
+  "name": "my-app",
   "version": "0.1.0",
-  "author": "Tanner Gaucher <tannermichaelgaucher@gmail.com>",
+  "private": true,
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.7",
-    "@mdx-js/react": "^1.5.7",
-    "gatsby": "^2.19.7",
-    "gatsby-image": "^2.2.39",
-    "gatsby-plugin-google-analytics": "^2.1.37",
-    "gatsby-plugin-manifest": "^2.2.39",
-    "gatsby-plugin-mdx": "^1.1.1",
-    "gatsby-plugin-offline": "^3.0.32",
-    "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-sharp": "^2.4.3",
-    "gatsby-remark-images": "^3.1.44",
-    "gatsby-remark-prismjs": "^3.3.31",
-    "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-source-sanity": "^5.0.5",
-    "gatsby-transformer-remark": "^2.6.51",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "moment": "^2.24.0",
-    "prism-react-renderer": "^1.0.2",
-    "prism-theme-night-owl": "^1.2.0",
-    "prismjs": "^1.19.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-live": "^2.2.2",
-    "semantic-styles": "0.0.20"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 1vmin;
+  color: hotpink;
+  background-color: black;
+  font-size: 10vmin;
+}
+
+hr {
+  background-color: #80cba2;
+  border-color: #80cba2;
+  height: 0.5vmin;
+  border-radius: 2vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 50s ease-in-out;
+    transition-duration: 50s;
+  }
+
+  .App-logo-2 {
+    animation: App-logo-spin infinite 100s ease-in-out;
+    transition-duration: 100s;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
