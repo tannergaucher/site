@@ -1,22 +1,20 @@
-import { useLayoutEffect, useState } from "react";
-
-import "./App.css";
+// import { useLayoutEffect, useState } from "react";
 
 function App() {
-  const [color, setColor] = useState(`paleVioletRed`);
+  // const [color, setColor] = useState(`paleVioletRed`);
 
   const h1Text = `Tanner Gaucher`;
   const h2Text = `Software Engineer Based in Brooklyn`;
 
-  useLayoutEffect(() => {
-    const tenSeconds = setInterval(function () {
-      setColor(`palevioletRed`);
-    }, 10000);
+  // useLayoutEffect(() => {
+  //   const tenSeconds = setInterval(function () {
+  //     setColor(`palevioletRed`);
+  //   }, 10000);
 
-    const fifteen = setInterval(function () {
-      setColor(`#fafafa`);
-    }, 15000);
-  }, []);
+  //   const fifteen = setInterval(function () {
+  //     setColor(`#fafafa`);
+  //   }, 15000);
+  // }, []);
 
   return (
     <div>
